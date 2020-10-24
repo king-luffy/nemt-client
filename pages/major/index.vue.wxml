@@ -1,0 +1,31 @@
+<template name="323f1892">
+    <view class="_div data-v-68e358ea center">
+        <van-search background="#3B9AFF" bindsearch="handleProxy" class="_van-search data-v-68e358ea" data-comkey="{{$k}}" data-eventid="{{'0'}}" placeholder="请输入搜索关键词"></van-search>
+        <picker bindchange="handleProxy" class="_picker data-v-68e358ea" data-comkey="{{$k}}" data-eventid="{{'1'}}" range="{{oneList}}" rangeKey="name">
+            <van-cell isLink class="_van-cell data-v-68e358ea" title="学历类型" value="{{oneValue}}"></van-cell>
+        </picker>
+        <picker bindchange="handleProxy" class="_picker data-v-68e358ea" data-comkey="{{$k}}" data-eventid="{{'2'}}" range="{{twoList}}" rangeKey="name">
+            <van-cell isLink class="_van-cell data-v-68e358ea" title="学科门类" value="{{twoValue}}"></van-cell>
+        </picker>
+        <view class="_div data-v-68e358ea line">
+            <view class="_div data-v-68e358ea line_text">查询结果：</view>
+        </view>
+        <van-collapse accordion bindchange="handleProxy" class="_van-collapse data-v-68e358ea" data-comkey="{{$k}}" data-eventid="{{'5'}}" value="{{accordionIdx}}">
+            <van-collapse-item bindtap="handleProxy" class="_van-collapse-item data-v-68e358ea" data-comkey="{{$k}}" data-eventid="{{'4_'+ix}}" key="{{ix}}" name="{{'idx'+ix}}" title="{{val.name}}" wx:for="{{threeList}}" wx:for-index="ix" wx:for-item="val" wx:key="ix">
+                <view class="_div data-v-68e358ea fouth-box" wx:if="{{fourthList.length>0}}">
+                    <view bindtap="handleProxy" class="_div data-v-68e358ea fouth" data-comkey="{{$k}}" data-eventid="{{'3_'+ix+'-'+i}}" key="{{i}}" wx:for="{{fourthList}}" wx:for-index="i" wx:key="i">
+                        <label class="_span data-v-68e358ea yuanquan" wx:if="{{i>=3}}">{{i+1}}</label>
+                        <label class="_span data-v-68e358ea yuanquan0" wx:else>{{i+1}}</label>
+                        <label class="_span data-v-68e358ea y_text">{{item.title}}</label>
+                    </view>
+                </view>
+                <view class="_div data-v-68e358ea fouth-box" wx:else>
+                    <label class="_span data-v-68e358ea fouth">暂无内容</label>
+                </view>
+                <view class="_div data-v-68e358ea" style="clear: both"></view>
+            </van-collapse-item>
+        </van-collapse>
+        <template is="2d4d433e" data="{{...$root[$kk+'5'],$root:$root}}" wx:if="{{isWait}}"></template>
+    </view>
+</template>
+<import src="/components/initing.vue.wxml"></import>

@@ -1,0 +1,113 @@
+<template name="2008a25f">
+    <view class="_div data-v-6cc5222a box">
+        <view class="_div data-v-6cc5222a fxd">
+            <van-search background="#3B9AFF" bindsearch="handleProxy" class="_van-search data-v-6cc5222a" data-comkey="{{$k}}" data-eventid="{{'0'}}" placeholder="搜索专业或学校"></van-search>
+            <view class="_div data-v-6cc5222a info-head">
+                <view class="_div data-v-6cc5222a card">
+                    <view class="_div data-v-6cc5222a c-title">填报信息</view>
+                    <view class="_div data-v-6cc5222a c-info">考生信息: 河南 <label class="_span data-v-6cc5222a" wx:if="{{subject=='w'}}">{{cwb2}}</label>
+                        <label class="_span data-v-6cc5222a" wx:if="{{subject=='l'}}">理科</label>
+                        <label class="_span data-v-6cc5222a" wx:if="{{subject=='c'}}">春季高考</label>    <label class="_span data-v-6cc5222a" wx:if="{{way=='zf'}}">分数: {{val}}分</label>
+                        <label class="_span data-v-6cc5222a" wx:else>名次: {{val}}名</label>
+                        <label class="_span data-v-6cc5222a"> 区间：{{section}}</label>
+                    </view>
+                    <view class="_div data-v-6cc5222a avatar">
+                        <image class="_img data-v-6cc5222a face-img" src="{{userInfo.avatar}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-6cc5222a news" wx:if="{{articleList.length>0}}">
+                <image class="_image data-v-6cc5222a news-img" src="/static/images/tequan.png"></image>
+                <swiper autoplay circular vertical class="_swiper data-v-6cc5222a news-swiper" interval="2000">
+                    <swiper-item class="_swiper-item data-v-6cc5222a" key="{{idx}}" wx:for="{{articleList}}" wx:for-index="idx" wx:for-item="art" wx:key="idx">
+                        <view bindtap="handleProxy" class="_div data-v-6cc5222a news-item" data-comkey="{{$k}}" data-eventid="{{'1_'+idx}}">{{art.title}}</view>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="_div data-v-6cc5222a stype">
+                <van-row class="_van-row data-v-6cc5222a">
+                    <van-col class="_van-col data-v-6cc5222a" span="1"></van-col>
+                    <van-col class="_van-col data-v-6cc5222a" span="6">
+                        <view class="_div data-v-6cc5222a dw">
+                            <label class="_span data-v-6cc5222a dw-num">{{total}}</label>个专业</view>
+                    </van-col>
+                    <van-col class="_van-col data-v-6cc5222a" span="6" wx:if="{{subject=='c'}}">
+                        <picker bindchange="handleProxy" class="_picker data-v-6cc5222a" data-comkey="{{$k}}" data-eventid="{{'2'}}" range="{{cityList}}">
+                            <view class="_div data-v-6cc5222a dw">
+                {{prov?prov:'院校所在地'}}
+                <van-icon class="_van-icon data-v-6cc5222a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                            </view>
+                        </picker>
+                    </van-col>
+                    <van-col class="_van-col data-v-6cc5222a" span="6" wx:else>
+                        <picker bindchange="handleProxy" class="_picker data-v-6cc5222a" data-comkey="{{$k}}" data-eventid="{{'3'}}" range="{{provList}}" rangeKey="text">
+                            <view class="_div data-v-6cc5222a dw">
+                {{prov?prov:'所在地'}}
+                <van-icon class="_van-icon data-v-6cc5222a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                            </view>
+                        </picker>
+                    </van-col>
+                    <van-col class="_van-col data-v-6cc5222a" span="6">
+                        <picker bindchange="handleProxy" class="_picker data-v-6cc5222a" data-comkey="{{$k}}" data-eventid="{{'4'}}" range="{{tabList}}" rangeKey="text">
+                            <view class="_div data-v-6cc5222a dw">
+                {{tab?tab:'院校标签'}}
+                <van-icon class="_van-icon data-v-6cc5222a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                            </view>
+                        </picker>
+                    </van-col>
+                    <van-col class="_van-col data-v-6cc5222a" span="6" wx:if="{{subject=='c'}}">
+                        <picker bindchange="handleProxy" class="_picker data-v-6cc5222a" data-comkey="{{$k}}" data-eventid="{{'5'}}" range="{{chunList}}">
+                            <view class="_div data-v-6cc5222a dw">
+                {{typ?typ:'院校类型'}}
+                <van-icon class="_van-icon data-v-6cc5222a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                            </view>
+                        </picker>
+                    </van-col>
+                    <van-col class="_van-col data-v-6cc5222a" span="6" wx:else>
+                        <picker bindchange="handleProxy" class="_picker data-v-6cc5222a" data-comkey="{{$k}}" data-eventid="{{'6'}}" range="{{typeList}}" rangeKey="text">
+                            <view class="_div data-v-6cc5222a dw">
+                {{typ?typ:'院校类型'}}
+                <van-icon class="_van-icon data-v-6cc5222a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                            </view>
+                        </picker>
+                    </van-col>
+                </van-row>
+            </view>
+        </view>
+        <view class="_div data-v-6cc5222a school">
+            <view bindtap="handleProxy" class="_div data-v-6cc5222a ls" data-comkey="{{$k}}" data-eventid="{{'7_'+idx}}" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="s" wx:key="idx">
+                <image class="_img data-v-6cc5222a s-img" src="{{s.avatar}}"></image>
+                <view class="_div data-v-6cc5222a s-info">
+                    <view class="_div data-v-6cc5222a s-name">
+                        <view class="_div data-v-6cc5222a s-bd">{{s.name}}</view>
+                        <label class="_span data-v-6cc5222a s-small">{{s.district}}</label>
+                        <view class="_div data-v-6cc5222a" style="clear: both"></view>
+                    </view>
+                    <view class="_div data-v-6cc5222a s-year">
+                        <view class="_div data-v-6cc5222a subjectA">{{s.major}}专业</view>
+                        <view class="_br data-v-6cc5222a"></view>
+                        <view class="_div data-v-6cc5222a" wx:if="{{way=='zf'}}">
+                            <label class="_span data-v-6cc5222a" wx:if="{{s.average=='无平均数据'}}"> {{s.years}}年{{s.subject}}录取最低  {{s.lowest}}分</label>
+                            <label class="_span data-v-6cc5222a" wx:else> {{s.years}}年文理录取平均分  {{s.average}}分</label>
+                        </view>
+                        <view class="_div data-v-6cc5222a" wx:else>
+                            <label class="_span data-v-6cc5222a" wx:if="{{s.ranks=='无和数据'}}"> {{s.years}}年{{s.subject}}最低位次  {{s.seating}}名</label>
+                            <label class="_span data-v-6cc5222a" wx:else> {{s.years}}年文理位次之和  {{s.ranks}}名</label>
+                        </view>
+                        <view class="_br data-v-6cc5222a"></view>选科要求：{{s.majors}}
+          </view>
+                    <view class="_div data-v-6cc5222a s-tag">
+                        <view class="_div data-v-6cc5222a tag" key="{{i}}" wx:for="{{s.type}}" wx:for-index="i" wx:for-item="c" wx:key="i">{{c}}</view>
+                        <view class="_div data-v-6cc5222a tag" wx:if="{{s.flag}}">{{s.flag}}</view>
+                    </view>
+                </view>
+            </view>
+            <template is="7671932c" data="{{...$root[$kk+'15'],$root:$root}}" wx:if="{{list.length<=0}}"></template>
+            <template is="577b3842" data="{{...$root[$kk+'16'],$root:$root}}" wx:if="{{list.length>1}}"></template>
+            <template is="2d4d433e" data="{{...$root[$kk+'17'],$root:$root}}" wx:if="{{isLoad}}"></template>
+        </view>
+    </view>
+</template>
+<import src="/components/nodata.vue.wxml"></import>
+<import src="/components/reach.vue.wxml"></import>
+<import src="/components/initing.vue.wxml"></import>

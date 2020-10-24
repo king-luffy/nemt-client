@@ -1,0 +1,19 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-icon": "../icon/index",
+        "van-collapse": "../collapse/index",
+        "van-collapse-item": "../collapse-item/index",
+        "van-search": "../search/index",
+        "van-cell": "../cell/index",
+        "van-cell-group": "../cell-group/index",
+        "van-row": "/static/vant/row/index",
+        "van-col": "/static/vant/col/index",
+        "van-tab": "../tab/index",
+        "van-tabs": "../tabs/index",
+        "van-progress": "../progress/index",
+        "van-popup": "../popup/index",
+        "van-checkbox": "../checkbox/index",
+        "van-checkbox-group": "../checkbox-group/index"
+    }
+}

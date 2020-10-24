@@ -1,0 +1,17 @@
+<template name="606bc540">
+    <view class="_div data-v-f61d4ca8 box">
+        <view class="_div data-v-f61d4ca8" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">
+            <view bindtap="handleProxy" class="_div data-v-f61d4ca8 art" data-comkey="{{$k}}" data-eventid="{{'0_'+idx}}">
+                <image class="_img data-v-f61d4ca8 art-img" src="{{item.avatar}}"></image>
+                <view class="_div data-v-f61d4ca8 art-txt">
+                    <view class="_div data-v-f61d4ca8 art-tt">{{item.name}}</view>
+                    <view class="_div data-v-f61d4ca8 art-ds">{{item.flag}}</view>
+                </view>
+            </view>
+        </view>
+        <template is="577b3842" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{list.length>8}}"></template>
+        <template is="7671932c" data="{{...$root[$kk+'1'],$root:$root}}" wx:if="{{list.length<=0}}"></template>
+    </view>
+</template>
+<import src="/components/reach.vue.wxml"></import>
+<import src="/components/nodata.vue.wxml"></import>

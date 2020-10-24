@@ -1,0 +1,32 @@
+<template name="181d90b6">
+    <view class="_div data-v-0881d09e box">
+        <view class="_div data-v-0881d09e info">
+            <view class="_div data-v-0881d09e card">
+                <image class="_img data-v-0881d09e face-img" src="{{userInfo.avatar}}" wx:if="{{userInfo}}"></image>
+                <image class="_img data-v-0881d09e face-img" src="/static/images/default-head.jpg" wx:else></image>
+                <view class="_div data-v-0881d09e card-r">
+                    <view class="_div data-v-0881d09e name" wx:if="{{userInfo}}">{{userInfo.nickname}}</view>
+                    <button bindgetuserinfo="handleProxy" class="_button data-v-0881d09e login" data-comkey="{{$k}}" data-eventid="{{'0'}}" openType="getUserInfo" wx:else>登录/注册</button>
+                    <view class="_div data-v-0881d09e tip" wx:if="{{!userInfo||userInfo.member=='0'}}">
+                        <view class="_div data-v-0881d09e tip-txt">暂未开通VIP</view>
+                    </view>
+                    <view class="_div data-v-0881d09e tip-desc" wx:else>
+                        <image class="_img data-v-0881d09e tip-img" src="/static/images/vip.png"></image>
+                        <view class="_br data-v-0881d09e"></view>
+                        <view class="_div data-v-0881d09e desc" wx:if="{{isVIP}}">有效至：{{userInfo.membertime}}</view>
+                        <view class="_div data-v-0881d09e desc" wx:else>会员已到期，公众号直接领取</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-0881d09e exchange">
+            <view class="_div data-v-0881d09e exchange-txt"> 请输入您的兑换码： </view>
+            <view class="_div data-v-0881d09e exchange-input">
+                <input bindinput="handleProxy" class="_input data-v-0881d09e" data-comkey="{{$k}}" data-eventid="{{'1'}}" placeholder="请输入卡片上的序列号" value="{{code}}"></input>
+            </view>
+            <view class="_div data-v-0881d09e exchange-button">
+                <button bindtap="handleProxy" class="_button data-v-0881d09e" data-comkey="{{$k}}" data-eventid="{{'2'}}" type="button">立即兑换</button>
+            </view>
+        </view>
+    </view>
+</template>

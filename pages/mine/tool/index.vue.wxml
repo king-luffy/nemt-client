@@ -1,0 +1,31 @@
+<template name="f49c024c">
+    <view class="_div data-v-160af666 center">
+        <view class="_div data-v-160af666 new-bg">
+            <view class="_div data-v-160af666 count">{{total}}</view>
+            <view class="_div data-v-160af666 title">计算结果</view>
+        </view>
+        <view class="_div data-v-160af666 main-box">
+            <view class="_div data-v-160af666 bod-ls">
+                <view class="_p data-v-160af666 bod-l">专业</view>
+                <view class="_div data-v-160af666 bod-r">
+                    <radio-group class="_radio-group data-v-160af666">
+                        <radio checked bindtap="handleProxy" class="_radio data-v-160af666" data-comkey="{{$k}}" data-eventid="{{'0'}}">美术</radio>
+                        <radio bindtap="handleProxy" class="_radio data-v-160af666" data-comkey="{{$k}}" data-eventid="{{'1'}}">编导</radio>
+                        <radio bindtap="handleProxy" class="_radio data-v-160af666" data-comkey="{{$k}}" data-eventid="{{'2'}}">体育</radio>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="_div data-v-160af666 bod-ls">
+                <view class="_p data-v-160af666 bod-l">统考分数</view>
+                <input bindinput="handleProxy" class="_input data-v-160af666 bod-int bod-r" data-comkey="{{$k}}" data-eventid="{{'3'}}" placeholder="请输入统考分数" type="number" value="{{val1}}"></input>
+            </view>
+            <view class="_div data-v-160af666 bod-ls">
+                <view class="_p data-v-160af666 bod-l">高考分数</view>
+                <input bindinput="handleProxy" class="_input data-v-160af666 bod-int bod-r" data-comkey="{{$k}}" data-eventid="{{'4'}}" placeholder="请输入高考分数" type="number" value="{{val2}}"></input>
+            </view>
+            <view class="_div data-v-160af666 commt">
+                <button bindtap="handleProxy" class="_button data-v-160af666 commt-btn" data-comkey="{{$k}}" data-eventid="{{'5'}}">立即计算</button>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,110 @@
+<template name="43f0a3c0">
+    <view class="_div data-v-e989d0e8 box">
+        <view class="_div data-v-e989d0e8 info">
+            <view class="_div data-v-e989d0e8 result">
+                <view class="_div data-v-e989d0e8 result-title1">
+                    <image class="_img data-v-e989d0e8 face-img" src="{{userInfo.avatar}}" wx:if="{{userInfo}}"></image>
+                </view>
+                <view class="_div data-v-e989d0e8 result-title2">
+                    <label class="_span data-v-e989d0e8">最终测评结果</label>
+                </view>
+                <view class="_div data-v-e989d0e8 result-title3">
+                    <image class="_img data-v-e989d0e8 result-img" src="{{one_img}}"></image>
+                    <image class="_img data-v-e989d0e8 result-img" src="{{two_img}}"></image>
+                    <image class="_img data-v-e989d0e8 result-img" src="{{three_img}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-e989d0e8 result1">
+            <view class="_div data-v-e989d0e8 result1-title"> 霍兰德职业性格倾向示意图 </view>
+            <view class="_div data-v-e989d0e8 result1-img">
+                <view class="_div data-v-e989d0e8 result1-w">
+                    <view class="_div data-v-e989d0e8 result1-x" wx:if="{{one=='S'}}">社会型(S):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{one=='R'}}">现实型(R):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{one=='E'}}">管理型(E):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{one=='A'}}">艺术型(A):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{one=='C'}}">常规型(C):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:else>研究型(I):</view>
+                    <view class="_div data-v-e989d0e8 result1-y">
+                        <van-progress class="_van-progress data-v-e989d0e8" color="#f2826a" percentage="{{one_count}}"></van-progress>
+                    </view>
+                </view>
+                <view class="_div data-v-e989d0e8 result1-w">
+                    <view class="_div data-v-e989d0e8 result1-x" wx:if="{{two=='S'}}">社会型(S):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{two=='R'}}">现实型(R):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{two=='E'}}">管理型(E):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{two=='A'}}">艺术型(A):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{two=='C'}}">常规型(C):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:else>研究型(I):</view>
+                    <view class="_div data-v-e989d0e8 result1-y">
+                        <van-progress class="_van-progress data-v-e989d0e8" color="#f2826a" percentage="{{two_count}}"></van-progress>
+                    </view>
+                </view>
+                <view class="_div data-v-e989d0e8 result1-w">
+                    <view class="_div data-v-e989d0e8 result1-x" wx:if="{{three=='S'}}">社会型(S):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{three=='R'}}">现实型(R):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{three=='E'}}">管理型(E):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{three=='A'}}">艺术型(A):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:elif="{{three=='C'}}">常规型(C):</view>
+                    <view class="_div data-v-e989d0e8 result1-x" wx:else>研究型(I):</view>
+                    <view class="_div data-v-e989d0e8 result1-y">
+                        <van-progress class="_van-progress data-v-e989d0e8" color="#3B9AFF" percentage="{{three_count}}"></van-progress>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-e989d0e8 space"></view>
+            <view class="_div data-v-e989d0e8 space"></view>
+        </view>
+        <view class="_div data-v-e989d0e8" key="{{idx}}" wx:for="{{desc}}" wx:for-index="idx" wx:for-item="s" wx:key="idx">
+            <view class="_div data-v-e989d0e8 result3" wx:if="{{s.character_content}}">
+                <view class="_div data-v-e989d0e8 result3-title">性格分析:{{s.result_keywords}}</view>
+                <view class="_div data-v-e989d0e8 result3-title1">
+                    <image class="_img data-v-e989d0e8 result3-img" src="/static/images/fen1.png"></image>
+                    <label class="_span data-v-e989d0e8 result3-span">性格特点</label>
+                </view>
+                <view class="_div data-v-e989d0e8 result3-content">
+          {{s.character_content}}
+        </view>
+                <view class="_div data-v-e989d0e8 result3-title1">
+                    <image class="_img data-v-e989d0e8 result3-img" src="/static/images/fen2.png"></image>
+                    <label class="_span data-v-e989d0e8 result3-span">共同特征</label>
+                </view>
+                <view class="_div data-v-e989d0e8 result3-content">
+          {{s.common_content}}
+        </view>
+            </view>
+            <view class="_div data-v-e989d0e8 space"></view>
+        </view>
+        <view class="_div data-v-e989d0e8" key="{{idx}}" wx:for="{{desc}}" wx:for-index="idx" wx:for-item="s" wx:key="idx">
+            <view class="_div data-v-e989d0e8 result3" wx:if="{{s.position_content}}">
+                <view class="_div data-v-e989d0e8 result3-title">职业描述:{{s.result_keywords}}</view>
+                <view class="_div data-v-e989d0e8 result3-title1">
+                    <image class="_img data-v-e989d0e8 result3-img" src="/static/images/fen1.png"></image>
+                    <label class="_span data-v-e989d0e8 result3-span">职业特征</label>
+                </view>
+                <view class="_div data-v-e989d0e8 result3-content">
+          {{s.position_content}}
+        </view>
+                <view class="_div data-v-e989d0e8 result3-title1">
+                    <image class="_img data-v-e989d0e8 result3-img" src="/static/images/fen2.png"></image>
+                    <label class="_span data-v-e989d0e8 result3-span">职业倾向</label>
+                </view>
+                <view class="_div data-v-e989d0e8 result3-content">
+          {{s.career_direction_content}}
+        </view>
+            </view>
+            <view class="_div data-v-e989d0e8 space"></view>
+        </view>
+        <view class="_div data-v-e989d0e8 result3" wx:if="{{desc.result4}}">
+            <view class="_div data-v-e989d0e8 result3-title">职业方向</view>
+            <view class="_div data-v-e989d0e8 result3-title1">
+                <image class="_img data-v-e989d0e8 result3-img" src="/static/images/fen1.png"></image>
+                <label class="_span data-v-e989d0e8 result3-span">就业方向</label>
+            </view>
+            <view class="_div data-v-e989d0e8 result3-content">
+        {{desc.result4.career_direction_content}}
+      </view>
+        </view>
+        <view class="_div data-v-e989d0e8 space"></view>
+    </view>
+</template>

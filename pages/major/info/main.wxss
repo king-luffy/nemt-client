@@ -1,0 +1,150 @@
+@import "../../html/article/main.wxss";
+
+.box {
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 40rpx;
+}
+
+.title1 {
+    width: 100%;
+    height: 280rpx;
+    background: #3b9aff;
+}
+
+.title1_span {
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.title1_span,.title1_span2 {
+    height: 70rpx;
+    line-height: 80rpx;
+    padding-left: 50rpx;
+    color: #fff;
+}
+
+.title1_span2,.title1_span3 {
+    font-size: 28rpx;
+}
+
+.title1_span3 {
+    height: 100rpx;
+    line-height: 80rpx;
+    padding-left: 50rpx;
+    color: #fff;
+}
+
+.title {
+    font-size: 32rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 20rpx;
+}
+
+.title_img {
+    padding-top: 10rpx;
+}
+
+.title_img,.title_img2 {
+    display: inline;
+    width: 26rpx;
+    height: 26rpx;
+    float: left;
+    padding-right: 2rpx;
+}
+
+.title_img2 {
+    padding-top: 15rpx;
+}
+
+.title_div {
+    float: left;
+    width: 80%;
+    line-height: 50rpx;
+    margin-left: 10rpx;
+}
+
+.desc {
+    font-size: 30rpx;
+    padding: 0rpx 20rpx;
+}
+
+.t2,.t3 {
+    padding-top: 30rpx;
+}
+
+.t3 {
+    padding-left: 10rpx;
+}
+
+.title2 {
+    width: 90%;
+    background-color: #fff;
+    border: 1rpx #eee;
+    border-radius: 20rpx;
+    margin-top: -30rpx;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333;
+    font-size: 34rpx;
+    font-weight: 700;
+    padding-top: 10rpx;
+}
+
+.info-title {
+    margin-left: 30rpx;
+}
+
+.info-b {
+    border-bottom: 4rpx solid #3b9aff;
+}
+
+.title4 {
+    font-size: 30rpx;
+    padding: 0rpx 20rpx;
+}
+
+.man {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.man-1,.man-2 {
+    width: 50%;
+}
+
+.man-title {
+    font-size: 30rpx;
+    font-weight: 700;
+    color: #3b9aff;
+}
+
+.zhiye {
+    height: 40rpx;
+    border-bottom: 1rpx solid #eee;
+    line-height: 30rpx;
+    padding: 15rpx;
+    border-radius: 10rpx;
+}
+
+.zhiye-img {
+    width: 20rpx;
+    height: 20rpx;
+    float: right;
+    padding-top: 10rpx;
+}

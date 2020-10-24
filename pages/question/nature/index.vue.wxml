@@ -1,0 +1,14 @@
+<template name="631e9d14">
+    <view class="_view data-v-e6c1e17c content" wx:if="{{show}}">
+        <template is="02a78055" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <view bindtap="handleProxy" catchtouchmove="preventTouchMove" class="_view data-v-e6c1e17c mask" data-comkey="{{$k}}" data-eventid="{{'1'}}" wx:if="{{showModal}}"></view>
+        <view class="_view data-v-e6c1e17c modalDlg" wx:if="{{showModal}}">
+            <text class="_text data-v-e6c1e17c text">测试结果</text>
+            <view class="_view data-v-e6c1e17c content">
+                <rich-text class="_rich-text data-v-e6c1e17c" nodes="{{content}}"></rich-text>
+            </view>
+            <view bindtap="handleProxy" class="_view data-v-e6c1e17c ok" data-comkey="{{$k}}" data-eventid="{{'2'}}">好的</view>
+        </view>
+    </view>
+</template>
+<import src="/components/xi-check2.vue.wxml"></import>

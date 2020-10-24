@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/mine/main",
+    "pages/mine/tool/main",
+    "pages/inform/main",
+    "pages/inform/news/main",
+    "pages/school/info/main",
+    "pages/school/search/main",
+    "pages/school/spring_search/main",
+    "pages/school/list/main",
+    "pages/school/desc/main",
+    "pages/html/article/main",
+    "pages/mine/collection/main",
+    "pages/mine/member/main",
+    "pages/mine/exchange/main",
+    "pages/mine/integral/main",
+    "pages/mine/subject/main",
+    "pages/major/info/main",
+    "pages/major/info_pre/main",
+    "pages/inform/info/main",
+    "pages/major/plan/main",
+    "pages/major/plan_show/main",
+    "pages/major/main",
+    "pages/test/main",
+    "pages/test/nature/main",
+    "pages/test/explain/main",
+    "pages/test/result/main",
+    "pages/test/answer/main",
+    "pages/question/main",
+    "pages/question/nature/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3B9AFF",
+    "navigationBarTitleText": "高考填报志愿",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "填志愿",
+        "pagePath": "pages/index/main",
+        "iconPath": "static/tabs/school_grey.png",
+        "selectedIconPath": "static/tabs/school_blue.png"
+      },
+      {
+        "text": "招生计划",
+        "pagePath": "pages/major/plan/main",
+        "iconPath": "static/tabs/plan_grey.png",
+        "selectedIconPath": "static/tabs/plan_blue.png"
+      },
+      {
+        "text": "专业",
+        "pagePath": "pages/major/main",
+        "iconPath": "static/tabs/pro_grey.png",
+        "selectedIconPath": "static/tabs/pro_blue.png"
+      },
+      {
+        "text": "评测",
+        "pagePath": "pages/test/main",
+        "iconPath": "static/tabs/infor_grey.png",
+        "selectedIconPath": "static/tabs/infor_blue.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/main",
+        "iconPath": "static/tabs/mine_grey.png",
+        "selectedIconPath": "static/tabs/mine_blue.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

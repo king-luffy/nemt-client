@@ -1,0 +1,23 @@
+<template name="28d782e8">
+    <view class="_div data-v-911227a6 box">
+        <view class="_div data-v-911227a6" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">
+            <view bindtap="handleProxy" class="_div data-v-911227a6 art" data-comkey="{{$k}}" data-eventid="{{'1_'+idx}}" wx:if="{{item.image}}">
+                <image class="_img data-v-911227a6 art-img" src="{{item.image}}"></image>
+                <view class="_div data-v-911227a6 art-txt">
+                    <view class="_div data-v-911227a6 art-tt">{{item.title}}</view>
+                    <view class="_div data-v-911227a6 art-ds">{{item.description}}</view>
+                </view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-911227a6 art2" data-comkey="{{$k}}" data-eventid="{{'0_'+idx}}" wx:else>
+                <view class="_div data-v-911227a6 art-tt2">{{item.title}}</view>
+                <view class="_div data-v-911227a6 art-ds2">{{item.description}}</view>
+            </view>
+        </view>
+        <template is="7671932c" data="{{...$root[$kk+'0'],$root:$root}}" wx:if="{{list.length<=0}}"></template>
+        <template is="577b3842" data="{{...$root[$kk+'1'],$root:$root}}" wx:if="{{list.length>8}}"></template>
+        <template is="2d4d433e" data="{{...$root[$kk+'2'],$root:$root}}" wx:if="{{isLoad}}"></template>
+    </view>
+</template>
+<import src="/components/nodata.vue.wxml"></import>
+<import src="/components/reach.vue.wxml"></import>
+<import src="/components/initing.vue.wxml"></import>

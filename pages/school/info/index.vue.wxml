@@ -1,0 +1,284 @@
+<template name="52fcfb22">
+    <view class="_div data-v-ffd3620a box">
+        <view class="_div data-v-ffd3620a head">
+            <view class="_div data-v-ffd3620a row">
+                <image class="_img data-v-ffd3620a img" src="{{info.avatar}}"></image>
+                <view class="_div data-v-ffd3620a">
+                    <view class="_p data-v-ffd3620a name">{{info.name}}</view>
+                    <view class="_div data-v-ffd3620a row">
+                        <view class="_div data-v-ffd3620a desc">{{info.position}}</view>
+                        <view class="_div data-v-ffd3620a desc" key="{{idx}}" wx:if="{{info.flags!==undefined&&info.flags.length>0}}" wx:for="{{info.flags}}" wx:for-index="idx" wx:key="idx">
+              {{item}}
+            </view>
+                        <view class="_div data-v-ffd3620a desc">{{info.district}}</view>
+                    </view>
+                    <!-- <view class="_p data-v-ffd3620a msg">院校代码：{{info.number}}  {{info.type}}  {{info.position}}  {{info.public?info.public:''}}</view> -->
+                </view>
+            </view>
+        </view>
+        <van-tabs class="_van-tabs data-v-ffd3620a" color="rgba(59, 154, 255, 1)">
+            <!-- <van-tab class="_van-tab data-v-ffd3620a" title="高考录取">
+                <view class="_div data-v-ffd3620a ls">
+                    <view class="_div data-v-ffd3620a ls-1">
+                        <van-row class="_van-row data-v-ffd3620a">
+                            <van-col class="_van-col data-v-ffd3620a">
+                                <picker bindchange="handleProxy" class="_picker data-v-ffd3620a" data-comkey="{{$k}}" data-eventid="{{'0'}}" range="{{arrayOne}}" value="{{indexOne}}">
+                                    <view class="_div data-v-ffd3620a dw">
+                    {{arrayOne[indexOne]}}
+                    <van-icon class="_van-icon data-v-ffd3620a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                                    </view>
+                                </picker>
+                            </van-col>
+                            <van-col class="_van-col data-v-ffd3620a">
+                                <picker bindchange="handleProxy" class="_picker data-v-ffd3620a" data-comkey="{{$k}}" data-eventid="{{'1'}}" range="{{arrayTwo}}" value="{{indexTwo}}">
+                                    <view class="_div data-v-ffd3620a dw">
+                    {{arrayTwo[indexTwo]}}
+                    <van-icon class="_van-icon data-v-ffd3620a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                                    </view>
+                                </picker>
+                            </van-col>
+                        </van-row>
+                    </view>
+                    <view class="_div data-v-ffd3620a row-right">
+                        <view class="_p data-v-ffd3620a text1">生源地：</view>
+                        <view class="_p data-v-ffd3620a text2">山东</view>
+                    </view>
+                </view>
+                <view class="_div data-v-ffd3620a row-blue">
+                    <view class="_p data-v-ffd3620a title">年份</view>
+                    <view class="_p data-v-ffd3620a title">批次</view>
+                    <view class="_p data-v-ffd3620a title">{{subject}}</view>
+                    <view class="_p data-v-ffd3620a title">最高分</view>
+                    <view class="_p data-v-ffd3620a title">最低分</view>
+                    <view class="_p data-v-ffd3620a title">计划数</view>
+                    <view class="_p data-v-ffd3620a title">投出数</view>
+                    <view class="_p data-v-ffd3620a title">位次</view>
+                </view>
+                <view class="_div data-v-ffd3620a">
+                    <view class="_div data-v-ffd3620a" wx:if="{{info.schoolScore!==undefined&&info.schoolScore.length>0}}">
+                        <view class="_div data-v-ffd3620a" key="{{idx}}" wx:for="{{info.schoolScore}}" wx:for-index="idx" wx:key="idx">
+                            <view class="_div data-v-ffd3620a row-white">
+                                <view class="_p data-v-ffd3620a hang">{{item.years}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.batch}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.subject}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.maximize}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.lowest}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.plan}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.joins}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.rank_min}}</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-ffd3620a" wx:elif="{{info.schoolSpring!==undefined&&info.schoolSpring.length>0}}">
+                        <view class="_div data-v-ffd3620a" key="{{idx}}" wx:for="{{info.schoolSpring}}" wx:for-index="idx" wx:key="idx">
+                            <view class="_div data-v-ffd3620a row-white">
+                                <view class="_p data-v-ffd3620a hang">{{item.years}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.position}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.category}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.high_score}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.low_score}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.people_number}}</view>
+                                <view class="_p data-v-ffd3620a hang">{{item.archive__number}}</view>
+                                <view class="_p data-v-ffd3620a hang">-</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-ffd3620a" wx:else>
+                        <template is="7671932c" data="{{...$root[$kk+'5'],$root:$root}}"></template>
+                    </view>
+                </view>
+                <view class="_div data-v-ffd3620a line-blue"></view>
+                <view class="_div data-v-ffd3620a message">
+                    <view class="_div data-v-ffd3620a message-li">
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">创建时间：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.creation_time}}</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">重点学科：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.disciplines}}</view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-ffd3620a message-li">
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">隶属于：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.subjection}}</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">学校类型：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.type}}</view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-ffd3620a message-li">
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">学生人数：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.students}}</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">博士点数：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.doctor}}</view>
+                        </view>
+                    </view>
+                    <view class="_div data-v-ffd3620a message-li">
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">院士人数：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.academician}}</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-a">
+                            <view class="_p data-v-ffd3620a brief">硕士点数：</view>
+                        </view>
+                        <view class="_div data-v-ffd3620a message-b">
+                            <view class="_p data-v-ffd3620a brief">{{info.master}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="_div data-v-ffd3620a">
+                    <view class="_div data-v-ffd3620a row">
+                        <image class="_img data-v-ffd3620a icon2" src="/static/images/nannv.png"></image>
+                        <view class="_p data-v-ffd3620a zi">男女比例</view>
+                    </view>
+                    <view class="_div data-v-ffd3620a row0">
+                        <image class="_img data-v-ffd3620a icon3" src="/static/images/boy.png"></image>
+                        <view class="_div data-v-ffd3620a progress">
+                            <view class="_div data-v-ffd3620a row00">
+                                <view class="_p data-v-ffd3620a zi2">{{info.man?info.man:50}}</view>
+                                <view class="_p data-v-ffd3620a zi0">:</view>
+                                <view class="_p data-v-ffd3620a zi4">{{100-(info.man?info.man:50)}}</view>
+                            </view>
+                            <van-progress class="_van-progress data-v-ffd3620a" color="#297FE0" percentage="{{info.man?info.man:50}}" showPivot="false"></van-progress>
+                        </view>
+                        <image class="_img data-v-ffd3620a icon4" src="/static/images/girl.png"></image>
+                    </view>
+                </view>
+                <view class="_div data-v-ffd3620a info-ul">
+                    <view class="_div data-v-ffd3620a info-a">
+                        <image class="_img data-v-ffd3620a icon" src="/static/images/bianzu.png"></image>
+                    </view>
+                    <view class="_div data-v-ffd3620a info-li-title info-b"> 专业历年录取分数 </view>
+                    <view class="_div data-v-ffd3620a info-c">
+                        <van-row class="_van-row data-v-ffd3620a">
+                            <van-col class="_van-col data-v-ffd3620a">
+                                <picker bindchange="handleProxy" class="_picker data-v-ffd3620a" data-comkey="{{$k}}" data-eventid="{{'2'}}" range="{{arrayFour}}" value="{{indexFour}}">
+                                    <view class="_div data-v-ffd3620a dw">
+                    {{arrayFour[indexFour]}}
+                    <van-icon class="_van-icon data-v-ffd3620a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                                    </view>
+                                </picker>
+                            </van-col>
+                            <van-col class="_van-col data-v-ffd3620a">
+                                <picker bindchange="handleProxy" class="_picker data-v-ffd3620a" data-comkey="{{$k}}" data-eventid="{{'3'}}" range="{{arrayFive}}" value="{{indexFive}}">
+                                    <view class="_div data-v-ffd3620a dw2">
+                    {{arrayFive[indexFive]}}
+                    <van-icon class="_van-icon data-v-ffd3620a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                                    </view>
+                                </picker>
+                            </van-col>
+                            <van-col class="_van-col data-v-ffd3620a">
+                                <picker bindchange="handleProxy" class="_picker data-v-ffd3620a" data-comkey="{{$k}}" data-eventid="{{'4'}}" range="{{sort}}" value="{{sort[0]}}">
+                                    <view class="_div data-v-ffd3620a dw3">
+                    {{k7}}
+                    <van-icon class="_van-icon data-v-ffd3620a" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                                    </view>
+                                </picker>
+                            </van-col>
+                        </van-row>
+                    </view>
+                </view>
+                <view class="_div data-v-ffd3620a line"></view>
+                <view class="_div data-v-ffd3620a">
+                    <view class="_div data-v-ffd3620a" key="{{idx}}" wx:for="{{info.schoolPro}}" wx:for-index="idx" wx:key="idx">
+                        <view class="_p data-v-ffd3620a txt-32">{{item.name}}</view>
+                        <view class="_div data-v-ffd3620a row-item">
+                            <view class="_div data-v-ffd3620a block">
+                                <view class="_p data-v-ffd3620a txt-24-grey">{{item.subject}}最低分数</view>
+                                <view class="_p data-v-ffd3620a txt-24-blue">{{item.lowest}}</view>
+                            </view>
+                            <view class="_div data-v-ffd3620a block3">
+                                <view class="_p data-v-ffd3620a txt-24-grey">专业代号</view>
+                                <view class="_p data-v-ffd3620a txt-24-blue">{{item.code}}</view>
+                            </view>
+                            <view class="_div data-v-ffd3620a block">
+                                <view class="_p data-v-ffd3620a txt-24-grey">{{item.subject}}最低位次</view>
+                                <view class="_p data-v-ffd3620a txt-24-blue">{{item.seating}}</view>
+                            </view>
+                        </view>
+                        <view class="_div data-v-ffd3620a row-item">
+                            <view class="_div data-v-ffd3620a block4">
+                                <view class="_p data-v-ffd3620a txt-24-grey">文理平均最低分</view>
+                                <view class="_p data-v-ffd3620a txt-24-blue">{{item.average}}</view>
+                            </view>
+                            <view class="_div data-v-ffd3620a block4">
+                                <view class="_p data-v-ffd3620a txt-24-grey">文理位次之和</view>
+                                <view class="_p data-v-ffd3620a txt-24-blue">{{item.ranks}}</view>
+                            </view>
+                        </view>
+                        <view class="_div data-v-ffd3620a row-item">
+                            <view class="_div data-v-ffd3620a block2">
+                                <view class="_p data-v-ffd3620a txt-24-grey">专业要求</view>
+                                <view class="_p data-v-ffd3620a txt-24-blue"> {{item.major}}</view>
+                            </view>
+                        </view>
+                        <view class="_div data-v-ffd3620a line"></view>
+                    </view>
+                </view>
+            </van-tab> -->
+            <van-tab class="_van-tab data-v-ffd3620a" title="学校简介">
+                <view class="_div data-v-ffd3620a row row_content">
+                    <image class="_img data-v-ffd3620a icon2" src="/static/images/school-info-icon.png"></image>
+                    <view class="_p data-v-ffd3620a zi">联系方式</view>
+                </view>
+                <view class="_div data-v-ffd3620a gf-content" style="line-height: 2">
+                    <image class="_img data-v-ffd3620a icon21" src="/static/images/telphone.png"></image>联系电话：{{info.telephone}}
+        </view>
+                <view class="_div data-v-ffd3620a gf-content3">
+                    <view class="_div data-v-ffd3620a content3-img">
+                        <image class="_img data-v-ffd3620a icon21" src="/static/images/web.png"></image>校园官网：
+          </view>
+                    <view class="_div data-v-ffd3620a content3-title"> {{info.weburl}}</view>
+                </view>
+                <view class="_div data-v-ffd3620a gf-content" style="line-height: 2">
+                    <image class="_img data-v-ffd3620a icon2" src="/static/images/email.png"></image>邮箱地址：{{info.mailbox}}
+        </view>
+                <view class="_div data-v-ffd3620a gf-content" style="line-height: 2">
+                    <image class="_img data-v-ffd3620a icon2" src="/static/images/address.png"></image>院校地址：{{info.address}}
+        </view>
+                <view class="_div data-v-ffd3620a gf-content" style="color:#f2be5a; line-height: 2; margin-top: 20rpx">学习指数：{{info.index_study}}
+          <view class="_div data-v-ffd3620a" style=" {{'width:'+info.index_study_p+'%; border:#f2be5a solid 5rpx;'}}"></view>
+                </view>
+                <view class="_div data-v-ffd3620a gf-content" style="color:#ed4a22; line-height: 2;">生活指数：{{info.index_life}}
+          <view class="_div data-v-ffd3620a" style=" {{'width:'+info.index_life_p+'%; border:#ed4a22 solid 5rpx;'}}"></view>
+                </view>
+                <view class="_div data-v-ffd3620a gf-content" style="color:#33a6f3; line-height: 2;">就业指数：{{info.index_obtain}}
+          <view class="_div data-v-ffd3620a" style=" {{'width:'+info.index_obtain_p+'%; border:#33a6f3 solid 5rpx;'}}"></view>
+                </view>
+                <view class="_div data-v-ffd3620a gf-content" style="color:#3fe174; line-height: 2;">综合评分：{{info.index_count}}
+          <view class="_div data-v-ffd3620a" style=" {{'width:'+info.index_count_p+'%; border:#3fe174 solid 5rpx;'}}"></view>
+                </view>
+                <view class="_div data-v-ffd3620a row row_content">
+                    <image class="_img data-v-ffd3620a icon2" src="/static/images/school-info-icon.png"></image>
+                    <view class="_p data-v-ffd3620a zi">官方介绍</view>
+                </view>
+                <view class="_p data-v-ffd3620a gf-content">        {{info.info}}</view>
+            </van-tab>
+        </van-tabs>
+        <view bindtap="handleProxy" class="_div data-v-ffd3620a collection" data-comkey="{{$k}}" data-eventid="{{'5'}}">
+            <image class="_img data-v-ffd3620a collect" src="/static/images/ysc.png" wx:if="{{isCollect}}"></image>
+            <image class="_img data-v-ffd3620a collect" src="/static/images/wsc.png" wx:else></image>
+        </view>
+    </view>
+</template>
+<import src="/components/nodata.vue.wxml"></import>

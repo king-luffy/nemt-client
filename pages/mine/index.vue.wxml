@@ -1,0 +1,45 @@
+<template name="24b7f836">
+    <view class="_div data-v-76b0ca52 box">
+        <view class="_div data-v-76b0ca52 info">
+            <view class="_div data-v-76b0ca52 card">
+                <image class="_img data-v-76b0ca52 face-img" src="{{userInfo.avatar}}" wx:if="{{userInfo}}"></image>
+                <image class="_img data-v-76b0ca52 face-img" src="/static/images/default-head.jpg" wx:else></image>
+                <view class="_div data-v-76b0ca52 card-r">
+                    <view class="_div data-v-76b0ca52 name" wx:if="{{userInfo}}">{{userInfo.nickname}}</view>
+                    <button bindgetuserinfo="handleProxy" class="_button data-v-76b0ca52 login" data-comkey="{{$k}}" data-eventid="{{'0'}}" openType="getUserInfo" wx:else>登录/注册</button>
+                    <view class="_div data-v-76b0ca52 tip" wx:if="{{!userInfo||userInfo.member=='0'}}">
+                        <view class="_div data-v-76b0ca52 tip-txt">暂未开通VIP</view>
+                    </view>
+                    <view class="_div data-v-76b0ca52 tip-desc" wx:else>
+                        <image class="_img data-v-76b0ca52 tip-img" src="/static/images/vip.png"></image>
+                        <view class="_br data-v-76b0ca52"></view>
+                        <view class="_div data-v-76b0ca52 desc" wx:if="{{isVIP}}">有效至：{{userInfo.membertime}}</view>
+                        <view class="_div data-v-76b0ca52 desc" wx:else>会员已到期，公众号直接领取</view>
+                    </view>
+                    <view class="_div data-v-76b0ca52 tip" wx:if="{{userInfo.code}}">
+                        <view class="_div data-v-76b0ca52 tip-txt2">兑换码:{{userInfo.code}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-76b0ca52 ls">
+            <view bindtap="handleProxy" class="_div data-v-76b0ca52 li-x" data-comkey="{{$k}}" data-eventid="{{'1'}}">
+                <image class="_img data-v-76b0ca52 li-img2" src="/static/images/b1.jpg"></image>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-76b0ca52 li-x" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+                <image class="_img data-v-76b0ca52 li-img2" src="https://image.tianziyuan.cn/bg/1.png"></image>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-76b0ca52 li-x" data-comkey="{{$k}}" data-eventid="{{'3'}}">
+                <image class="_img data-v-76b0ca52 li-img2" src="https://image.tianziyuan.cn/bg/2.png"></image>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-76b0ca52 li-x" data-comkey="{{$k}}" data-eventid="{{'4'}}">
+                <image class="_img data-v-76b0ca52 li-img2" src="https://image.tianziyuan.cn/bg/3.png"></image>
+            </view>
+            <view class="_div data-v-76b0ca52 li-x">
+                <button class="_button data-v-76b0ca52 share" openType="share">
+                    <image class="_img data-v-76b0ca52 li-img2" src="https://image.tianziyuan.cn/bg/4.png"></image>
+                </button>
+            </view>
+        </view>
+    </view>
+</template>

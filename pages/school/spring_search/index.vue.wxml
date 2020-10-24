@@ -1,0 +1,64 @@
+<template name="5fff8656">
+    <view class="_div data-v-01451a43 box">
+        <view class="_div data-v-01451a43 stype">
+            <van-row class="_van-row data-v-01451a43">
+                <van-col class="_van-col data-v-01451a43" span="6">
+                    <picker bindchange="handleProxy" class="_picker data-v-01451a43" data-comkey="{{$k}}" data-eventid="{{'0'}}" range="{{pickList1}}">
+                        <view class="_div data-v-01451a43 dw">
+              {{pick1?pick1:'春考类别'}}
+              <van-icon class="_van-icon data-v-01451a43" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                        </view>
+                    </picker>
+                </van-col>
+                <van-col class="_van-col data-v-01451a43" span="6">
+                    <picker bindchange="handleProxy" class="_picker data-v-01451a43" data-comkey="{{$k}}" data-eventid="{{'1'}}" range="{{pickList2}}">
+                        <view class="_div data-v-01451a43 dw">
+              {{pick2?pick2:'学科层次'}}
+              <van-icon class="_van-icon data-v-01451a43" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                        </view>
+                    </picker>
+                </van-col>
+                <van-col class="_van-col data-v-01451a43" span="6">
+                    <picker bindchange="handleProxy" class="_picker data-v-01451a43" data-comkey="{{$k}}" data-eventid="{{'2'}}" range="{{pickList3}}">
+                        <view class="_div data-v-01451a43 dw">
+              {{pick3?pick3:'年份'}}
+              <van-icon class="_van-icon data-v-01451a43" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                        </view>
+                    </picker>
+                </van-col>
+            </van-row>
+        </view>
+        <view class="_div data-v-01451a43 scholl">
+            <view bindtap="handleProxy" class="_div data-v-01451a43 ls" data-comkey="{{$k}}" data-eventid="{{'3_'+idx}}" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="s" wx:key="idx">
+                <image class="_img data-v-01451a43 s-img" src="{{s.avatar}}"></image>
+                <view class="_div data-v-01451a43 s-r">
+                    <van-icon class="_van-icon data-v-01451a43" color="#999999" name="arrow" size="20px"></van-icon>
+                </view>
+                <view class="_div data-v-01451a43 s-info">
+                    <view class="_div data-v-01451a43 s-name">
+                        <view class="_div data-v-01451a43 s-bd">{{s.pro_name}}</view>
+                        <view class="_div data-v-01451a43" style="clear: both"></view>
+                    </view>
+                    <view class="_div data-v-01451a43 s-tag">
+                        <view class="_div data-v-01451a43 tag2">{{s.name}}</view>
+                        <view class="_div data-v-01451a43 tag">{{s.category}}</view>
+                        <view class="_div data-v-01451a43 tag2">{{s.position}}</view>
+                        <view class="_div data-v-01451a43" style="clear: both"></view>
+                    </view>
+                    <view class="_div data-v-01451a43 s-tag">
+                        <view class="_div data-v-01451a43 tag3">编号：{{s.pro_number}}</view>
+                        <view class="_div data-v-01451a43 tag3">学费：{{s.pro_money}}</view>
+                        <view class="_div data-v-01451a43 tag3">计划：{{s.pro_plan}}</view>
+                        <view class="_div data-v-01451a43" style="clear: both"></view>
+                    </view>
+                </view>
+            </view>
+            <template is="7671932c" data="{{...$root[$kk+'8'],$root:$root}}" wx:if="{{list.length<=0}}"></template>
+        </view>
+        <template is="577b3842" data="{{...$root[$kk+'9'],$root:$root}}" wx:if="{{list.length>8}}"></template>
+        <template is="2d4d433e" data="{{...$root[$kk+'10'],$root:$root}}" wx:if="{{isLoad}}"></template>
+    </view>
+</template>
+<import src="/components/nodata.vue.wxml"></import>
+<import src="/components/reach.vue.wxml"></import>
+<import src="/components/initing.vue.wxml"></import>

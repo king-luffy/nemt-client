@@ -1,0 +1,47 @@
+<template name="cbcc9d10">
+    <view class="_div data-v-57d1dc2c box">
+        <view class="_div data-v-57d1dc2c title1">
+            <view class="_div data-v-57d1dc2c title1_span">{{profess.name}}</view>
+        </view>
+        <view class="_div data-v-57d1dc2c title2">
+            <view class="_div data-v-57d1dc2c title3">
+                <view class="_div data-v-57d1dc2c title t2">
+                    <image class="_img data-v-57d1dc2c title_img" src="/static/images/sj.png"></image>
+                    <view class="_div data-v-57d1dc2c title_div">职业介绍</view>
+                </view>
+                <view class="_div data-v-57d1dc2c desc">
+                    <template is="c0406f1e" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-57d1dc2c title t2">
+                    <image class="_img data-v-57d1dc2c title_img" src="/static/images/sj.png"></image>工作内容
+        </view>
+                <view class="_div data-v-57d1dc2c desc" wx:if="{{profess.job_content}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'1'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-57d1dc2c desc" wx:else> 无 </view>
+                <view class="_div data-v-57d1dc2c title t2">
+                    <image class="_img data-v-57d1dc2c title_img" src="/static/images/sj.png"></image>工作要求
+        </view>
+                <view class="_div data-v-57d1dc2c desc" wx:if="{{profess.job_requirements}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'2'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-57d1dc2c desc" wx:else> 无 </view>
+                <view class="_div data-v-57d1dc2c title t2">
+                    <image class="_img data-v-57d1dc2c title_img" src="/static/images/sj.png"></image>工作特点
+        </view>
+                <view class="_div data-v-57d1dc2c desc" wx:if="{{profess.job_trait}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'3'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-57d1dc2c desc" wx:else> 无 </view>
+                <view class="_div data-v-57d1dc2c title t2">
+                    <image class="_img data-v-57d1dc2c title_img" src="/static/images/sj.png"></image>小贴士
+        </view>
+                <view class="_div data-v-57d1dc2c desc" wx:if="{{profess.tips}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'4'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-57d1dc2c desc" wx:else> 无 </view>
+            </view>
+        </view>
+    </view>
+</template>
+<import src="/modules/mpvue-wxparse/src/wxParse.vue.wxml"></import>

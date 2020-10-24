@@ -1,0 +1,21 @@
+@import "../../html/article/main.wxss";
+
+.add_btn {
+    width: 100%;
+    position: fixed;
+    bottom: 0rpx;
+}
+
+.btn {
+    background: #14a1fd;
+    color: #fff;
+    border-radius: 0rpx;
+}
+
+.btn,.img {
+    width: 100%;
+}
+
+.img {
+    margin-bottom: 50rpx;
+}

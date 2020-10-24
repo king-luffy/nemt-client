@@ -1,0 +1,7 @@
+<template name="2d4d433e">
+    <view class="_div data-v-79c6e2ef load">
+        <view class="_div data-v-79c6e2ef wait">
+            <image class="_img data-v-79c6e2ef wait-img" src="/static/images/loading.gif"></image>
+        </view>
+    </view>
+</template>

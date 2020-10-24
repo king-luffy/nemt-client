@@ -1,0 +1,21 @@
+{
+    "navigationBarTitleText": "专业",
+    "navigationBarBackgroundColor": "#3B9AFF",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-collapse": "../../static/vant/collapse/index",
+        "van-collapse-item": "../../static/vant/collapse-item/index",
+        "van-search": "../../static/vant/search/index",
+        "van-cell": "../../static/vant/cell/index",
+        "van-cell-group": "../../static/vant/cell-group/index",
+        "van-icon": "../../static/vant/icon/index",
+        "van-row": "/static/vant/row/index",
+        "van-col": "/static/vant/col/index",
+        "van-tab": "../../static/vant/tab/index",
+        "van-tabs": "../../static/vant/tabs/index",
+        "van-progress": "../../static/vant/progress/index",
+        "van-popup": "../../static/vant/popup/index",
+        "van-checkbox": "../../static/vant/checkbox/index",
+        "van-checkbox-group": "../../static/vant/checkbox-group/index"
+    }
+}

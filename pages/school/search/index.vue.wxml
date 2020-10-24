@@ -1,0 +1,72 @@
+<template name="fd7b1bae">
+    <view class="_div data-v-fbb10a16 box">
+        <view class="_div data-v-fbb10a16 s">
+            <van-search useActionSlot background="#3B9AFF" bindchange="handleProxy" bindsearch="handleProxy" class="_van-search data-v-fbb10a16" data-comkey="{{$k}}" data-eventid="{{'1'}}" placeholder="输入学校关键字" value="{{keyword}}">
+                <view bindtap="handleProxy" class="_view data-v-fbb10a16 sbtn" data-comkey="{{$k}}" data-eventid="{{'0'}}" slot="action">搜索</view>
+            </van-search>
+        </view>
+        <view class="_div data-v-fbb10a16 stype">
+            <van-row class="_van-row data-v-fbb10a16">
+                <van-col class="_van-col data-v-fbb10a16" span="6">
+                    <picker bindchange="handleProxy" class="_picker data-v-fbb10a16" data-comkey="{{$k}}" data-eventid="{{'2'}}" range="{{pickList1}}" rangeKey="district">
+                        <view class="_div data-v-fbb10a16 dw">
+              {{pick1?pick1:'所在地'}}
+              <van-icon class="_van-icon data-v-fbb10a16" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                        </view>
+                    </picker>
+                </van-col>
+                <van-col class="_van-col data-v-fbb10a16" span="6">
+                    <picker bindchange="handleProxy" class="_picker data-v-fbb10a16" data-comkey="{{$k}}" data-eventid="{{'3'}}" range="{{pickList2}}" rangeKey="type">
+                        <view class="_div data-v-fbb10a16 dw">
+              {{pick2?pick2:'院校类型'}}
+              <van-icon class="_van-icon data-v-fbb10a16" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                        </view>
+                    </picker>
+                </van-col>
+                <van-col class="_van-col data-v-fbb10a16" span="6">
+                    <picker bindchange="handleProxy" class="_picker data-v-fbb10a16" data-comkey="{{$k}}" data-eventid="{{'4'}}" range="{{pickList3}}">
+                        <view class="_div data-v-fbb10a16 dw">
+              {{pick3?pick3:'院校标签'}}
+              <van-icon class="_van-icon data-v-fbb10a16" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                        </view>
+                    </picker>
+                </van-col>
+                <van-col class="_van-col data-v-fbb10a16" span="6">
+                    <picker bindchange="handleProxy" class="_picker data-v-fbb10a16" data-comkey="{{$k}}" data-eventid="{{'5'}}" range="{{pickList4}}">
+                        <view class="_div data-v-fbb10a16 dw">
+              {{pick4?pick4:'学科层次'}}
+              <van-icon class="_van-icon data-v-fbb10a16" customStyle="top: 3rpx;left: 5rpx" name="arrow-down"></van-icon>
+                        </view>
+                    </picker>
+                </van-col>
+            </van-row>
+        </view>
+        <view class="_div data-v-fbb10a16 scholl">
+            <view bindtap="handleProxy" class="_div data-v-fbb10a16 ls" data-comkey="{{$k}}" data-eventid="{{'6_'+idx}}" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="s" wx:key="idx">
+                <image class="_img data-v-fbb10a16 s-img" src="{{s.avatar}}"></image>
+                <view class="_div data-v-fbb10a16 s-r">
+                    <van-icon class="_van-icon data-v-fbb10a16" color="#999999" name="arrow" size="20px"></van-icon>
+                </view>
+                <view class="_div data-v-fbb10a16 s-info">
+                    <view class="_div data-v-fbb10a16 s-name">
+                        <view class="_div data-v-fbb10a16 s-bd">{{s.name}}</view>
+                        <label class="_span data-v-fbb10a16 s-small">{{s.district}}</label>
+                        <view class="_div data-v-fbb10a16" style="clear: both"></view>
+                    </view>
+                    <view class="_div data-v-fbb10a16 s-tag">
+                        <view class="_div data-v-fbb10a16 tag" key="{{i}}" wx:for="{{s.flags}}" wx:for-index="i" wx:for-item="t" wx:key="i">{{t}}</view>
+                        <view class="_div data-v-fbb10a16 tag2" key="{{n}}" wx:for="{{s.type}}" wx:for-index="n" wx:for-item="c" wx:key="n">{{c}}</view>
+                        <view class="_div data-v-fbb10a16 tag3" wx:if="{{s.publick}}">{{s.public}}</view>
+                        <view class="_div data-v-fbb10a16" style="clear: both"></view>
+                    </view>
+                </view>
+            </view>
+            <template is="7671932c" data="{{...$root[$kk+'11'],$root:$root}}" wx:if="{{list.length<=0}}"></template>
+        </view>
+        <template is="577b3842" data="{{...$root[$kk+'12'],$root:$root}}" wx:if="{{list.length>8}}"></template>
+        <template is="2d4d433e" data="{{...$root[$kk+'13'],$root:$root}}" wx:if="{{isLoad}}"></template>
+    </view>
+</template>
+<import src="/components/nodata.vue.wxml"></import>
+<import src="/components/reach.vue.wxml"></import>
+<import src="/components/initing.vue.wxml"></import>

@@ -1,0 +1,9 @@
+<template name="35247e10">
+    <view class="_div data-v-12730d3e box">
+        <image class="_img data-v-12730d3e img" mode="widthFix" src="https://api.tianziyuan.cn/uploads/other/test3.jpg" wx:if="{{id==1}}"></image>
+        <image class="_img data-v-12730d3e img" mode="widthFix" src="https://api.tianziyuan.cn/uploads/other/test4.jpg" wx:else></image>
+        <view class="_div data-v-12730d3e add_btn">
+            <button bindtap="handleProxy" class="_button data-v-12730d3e btn" data-comkey="{{$k}}" data-eventid="{{'0'}}"> 开始评测 </button>
+        </view>
+    </view>
+</template>

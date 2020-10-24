@@ -1,0 +1,44 @@
+<template name="93ed3024">
+    <view class="_div data-v-8451700c box">
+        <view class="_div data-v-8451700c integral">
+            <view class="_div data-v-8451700c integral-title">
+                <view class="_div data-v-8451700c integral-img">
+                    <image class="_img data-v-8451700c" src="https://image.tianziyuan.cn/bg/m_top.png"></image>
+                </view>
+                <view class="_div data-v-8451700c integral-txt">
+          {{score}}
+        </view>
+                <view class="_div data-v-8451700c integral-use"> 可用积分 </view>
+            </view>
+            <view class="_div data-v-8451700c ls">
+                <view class="_div data-v-8451700c li-x">
+                    <image class="_img data-v-8451700c li-img2" src="https://image.tianziyuan.cn/bg/5.png"></image>
+                    <view class="_div data-v-8451700c li-txt2">+{{ad_points}}</view>
+                </view>
+                <view class="_div data-v-8451700c li-x">
+                    <button class="_button data-v-8451700c share" openType="share">
+                        <image class="_img data-v-8451700c li-img2" src="https://image.tianziyuan.cn/bg/6.png"></image>
+                    </button>
+                    <view class="_div data-v-8451700c li-txt3">+{{shared_points}}</view>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-8451700c li-x" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                    <image class="_img data-v-8451700c li-img2" src="https://image.tianziyuan.cn/bg/7.png"></image>
+                    <view class="_div data-v-8451700c li-txt4">+{{regist_give}}</view>
+                </view>
+            </view>
+            <view class="_div data-v-8451700c integral-list">
+                <view class="_div data-v-8451700c integral-record"> 积分记录 </view>
+                <view class="_div data-v-8451700c" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">
+                    <view class="_div data-v-8451700c integral-li">
+                        <view class="_div data-v-8451700c li-a">{{item.score}}</view>
+                        <view class="_div data-v-8451700c li-b">{{item.type}}</view>
+                        <view class="_div data-v-8451700c li-c">{{item.createtime}}</view>
+                    </view>
+                </view>
+                <view class="_div data-v-8451700c integral-end">
+                    <view class="_div data-v-8451700c li-d">仅显示最新的50条记录</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

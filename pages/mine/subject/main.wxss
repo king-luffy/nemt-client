@@ -1,0 +1,85 @@
+@import "../../html/article/main.wxss";
+
+.box {
+    padding: 0 30rpx;
+}
+
+.exchange {
+    padding: 100rpx 50rpx;
+}
+
+.exchange-txt {
+    color: #505050;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: left;
+}
+
+.exchange-input {
+    padding-top: 50rpx;
+    text-align: center;
+    font-size: 28rpx;
+    width: 500rpx;
+}
+
+.exchange-input input {
+    width: 600rpx;
+    height: 60rpx;
+    color: #b1b1b1;
+    background-color: #fff;
+    font-size: 12px;
+    text-align: left;
+    border: 1rpx solid #dedede;
+    border-radius: 10rpx;
+}
+
+.exchange-button {
+    padding-top: 50rpx;
+}
+
+.exchange-button button {
+    width: 242px;
+    color: #fff;
+    background-color: #2a82e4;
+    border-radius: 23px;
+    font-size: 16px;
+}
+
+checkbox {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+checkbox .wx-checkbox-input {
+    border-radius: 50%;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #3b9aff;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked:before {
+    width: 28rpx;
+    height: 28rpx;
+    line-height: 30rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    background: transparent;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.bod-r-i {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bod-r-c {
+    width: 150rpx;
+    height: 70rpx;
+}

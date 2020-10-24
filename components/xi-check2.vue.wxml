@@ -1,0 +1,35 @@
+<template name="02a78055">
+    <view class="_view data-v-2dc61963 answer__content">
+        <view class="_view data-v-2dc61963 answer__question">
+            <view class="_view data-v-2dc61963 question_title">
+                <view class="_view data-v-2dc61963 title__number">{{newOptList[showQuestionIndex].parent_title}}</view>
+            </view>
+            <view class="_view data-v-2dc61963 question_title">
+                <view class="_view data-v-2dc61963 title__number">{{newOptList[showQuestionIndex].number||showQuestionIndex+1}}/{{newOptList.length}}.</view>
+                <view class="_view data-v-2dc61963"> （{{newOptList[showQuestionIndex].type=='write'?'填空':newOptList[showQuestionIndex].type=='radio'?'单选':newOptList[showQuestionIndex].type=='checkbox'?'多选':''}}) {{newOptList[showQuestionIndex].title}}
+          </view>
+            </view>
+            <view class="_view data-v-2dc61963 question__option" wx:if="{{newOptList[showQuestionIndex].name_image}}">
+                <image bindtap="handleProxy" class="_img data-v-2dc61963 question-img" data-comkey="{{$k}}" data-eventid="{{'0'}}" data-img="{{newOptList[showQuestionIndex].name_image}}" mode="widthFix" src="{{newOptList[showQuestionIndex].name_image}}"></image>
+            </view>
+            <view class="_view data-v-2dc61963 question__option" wx:if="{{newOptList[showQuestionIndex].right_image}}">
+                <view class="_view data-v-2dc61963 question_title">答案({{newOptList[showQuestionIndex].score}}分)：</view>
+                <image class="_img data-v-2dc61963 question-r" mode="widthFix" src="{{newOptList[showQuestionIndex].right_image}}" wx:if="{{newOptList[showQuestionIndex].type=='radio'}}"></image>
+                <image bindtap="handleProxy" class="_img data-v-2dc61963 question-img" data-comkey="{{$k}}" data-eventid="{{'1'}}" data-img="{{newOptList[showQuestionIndex].right_image}}" mode="widthFix" src="{{newOptList[showQuestionIndex].right_image}}" wx:else></image>
+            </view>
+            <view class="_view data-v-2dc61963 question__option">
+                <block wx:if="{{newOptList[showQuestionIndex].type=='radio'||newOptList[showQuestionIndex].type=='checkbox'}}">
+                    <view bindtap="handleProxy" class="_view data-v-2dc61963 question__option__item" data-comkey="{{$k}}" data-eventid="{{'2_'+index}}" data-id="{{item.id}}" style=" {{item.active?optActiveStyle:optStyle}}" wx:for="{{newOptList[showQuestionIndex].question_option}}" wx:key="index">
+                        <view class="_view data-v-2dc61963">{{item.content}}</view>
+                    </view>
+                </block>
+                <view class="_view data-v-2dc61963 item__key__box" wx:if="{{newOptList[showQuestionIndex].type=='write'}}"> 得分：<input bindinput="handleProxy" class="_input data-v-2dc61963 write_input" data-comkey="{{$k}}" data-eventid="{{'3'}}" placeholder="请填写你的预估分数" type="number" value="{{newOptList[showQuestionIndex].question_key}}"></input>
+                </view>
+            </view>
+        </view>
+        <view bindtap="handleProxy" class="_view data-v-2dc61963 answer__next__btn2" data-comkey="{{$k}}" data-eventid="{{'4'}}" style=" {{nextStyle}}"> 上一 题 </view>
+        <view bindtap="handleProxy" class="_view data-v-2dc61963 answer__next__btn" data-comkey="{{$k}}" data-eventid="{{'5'}}" style=" {{nextStyle}}">
+      {{isEnd?'提交':'下 一 题'}}
+    </view>
+    </view>
+</template>

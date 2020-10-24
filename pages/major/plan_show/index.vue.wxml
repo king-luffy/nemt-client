@@ -1,0 +1,13 @@
+<template name="10a33c49">
+    <view bindtouchend="handleProxy" bindtouchstart="handleProxy" class="_div data-v-453af18f center" data-comkey="{{$k}}" data-eventid="{{'2'}}">
+        <image class="_img data-v-453af18f page_img" src="{{url}}"></image>
+        <view class="_div data-v-453af18f bottom">
+            <view bindtap="handleProxy" class="_div data-v-453af18f bottom_left" data-comkey="{{$k}}" data-eventid="{{'0'}}">上一页</view>
+            <view class="_div data-v-453af18f bottom_center">
+                <view class="_p data-v-453af18f page_no">书籍页码：{{id}}</view>
+                <view class="_p data-v-453af18f page_text">您可以试试左右滑动</view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-453af18f bottom_right" data-comkey="{{$k}}" data-eventid="{{'1'}}">下一页</view>
+        </view>
+    </view>
+</template>

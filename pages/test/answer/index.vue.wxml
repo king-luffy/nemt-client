@@ -1,0 +1,149 @@
+<template name="214e73be">
+    <view class="_div data-v-36a339ed box">
+        <view class="_div data-v-36a339ed info">
+            <view class="_div data-v-36a339ed result">
+                <view class="_div data-v-36a339ed result-title1">
+                    <image class="_img data-v-36a339ed face-img" src="{{userInfo.avatar}}" wx:if="{{userInfo}}"></image>
+                </view>
+                <view class="_div data-v-36a339ed result-title2">
+                    <label class="_span data-v-36a339ed">最终测评结果</label>
+                </view>
+                <view class="_div data-v-36a339ed result-title3">
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/E.jpg" wx:if="{{one=='E'}}"></image>
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/I.jpg" wx:else></image>
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/S.jpg" wx:if="{{two=='S'}}"></image>
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/N.jpg" wx:else></image>
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/T.jpg" wx:if="{{three=='T'}}"></image>
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/F.jpg" wx:else></image>
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/J.jpg" wx:if="{{four=='J'}}"></image>
+                    <image class="_img data-v-36a339ed result-img" src="/static/images/P.jpg" wx:else></image>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-36a339ed result1">
+            <view class="_div data-v-36a339ed result1-title"> MBTI职业性格倾向示意图 </view>
+            <view class="_div data-v-36a339ed result1-img">
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-x">外向(E):</view>
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#f2826a" percentage="{{one_count}}"></van-progress>
+                    </view>
+                </view>
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#f2826a" percentage="{{100-one_count}}"></van-progress>
+                    </view>
+                    <view class="_div data-v-36a339ed result1-x">内向(I):</view>
+                </view>
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-x">感觉(S):</view>
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#3B9AFF" percentage="{{two_count}}"></van-progress>
+                    </view>
+                </view>
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#3B9AFF" percentage="{{100-two_count}}"></van-progress>
+                    </view>
+                    <view class="_div data-v-36a339ed result1-x">直觉(N):</view>
+                </view>
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-x">思考(T):</view>
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#f2826a" percentage="{{three_count}}"></van-progress>
+                    </view>
+                </view>
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#f2826a" percentage="{{100-three_count}}"></van-progress>
+                    </view>
+                    <view class="_div data-v-36a339ed result1-x">情感(F):</view>
+                </view>
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-x">判断(J):</view>
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#3B9AFF" percentage="{{four_count}}"></van-progress>
+                    </view>
+                </view>
+                <view class="_div data-v-36a339ed result1-w">
+                    <view class="_div data-v-36a339ed result1-y">
+                        <van-progress class="_van-progress data-v-36a339ed" color="#3B9AFF" percentage="{{100-four_count}}"></van-progress>
+                    </view>
+                    <view class="_div data-v-36a339ed result1-x">知觉(p):</view>
+                </view>
+            </view>
+            <view class="_div data-v-36a339ed result1-title1"> 倾向程度示意图表示4个维度分别的倾向程度，从中间往两侧看，彩色指示条占比越多倾向越明显。 </view>
+            <view class="_div data-v-36a339ed space"></view>
+            <view class="_div data-v-36a339ed result1-title2"> 外向与内向是指我们心理能量的作用方向，判断与知觉是我们做事的两种方式。心理学称之为"态度"。感觉与直觉是我们获取信息的方式 ，思考和情感是做决定的方式，心理学称之为功能，功能是人格理论的精髓、核心。每一个人在都会用到四种功能，但对功能应用的喜好程度不一样 等级中第一位的称之为“主导功能”，第二位的称为“辅助功能”，每个人都需要运用到两个过程。 </view>
+            <view class="_div data-v-36a339ed space"></view>
+        </view>
+        <view class="_div data-v-36a339ed result2">
+            <view class="_div data-v-36a339ed result2-title"> {{desc.description}}</view>
+        </view>
+        <view class="_div data-v-36a339ed result3">
+            <view class="_div data-v-36a339ed result3-title">性格描述</view>
+            <view class="_div data-v-36a339ed result3-title1" style="width: 200rpx">
+                <image class="_img data-v-36a339ed result3-img" mode="widthFix" src="/static/images/fen1.png"></image>
+                <label class="_span data-v-36a339ed result3-span">个性特征描述</label>
+            </view>
+            <view class="_div data-v-36a339ed result3-content">
+        {{desc.character_content}}
+      </view>
+            <view class="_div data-v-36a339ed result3-title1" style="width: 220rpx">
+                <image class="_img data-v-36a339ed result3-img" src="/static/images/fen2.png"></image>
+                <label class="_span data-v-36a339ed result3-span">可能存在的盲点</label>
+            </view>
+            <view class="_div data-v-36a339ed result3-content">
+        {{desc.blind_spot_content}}
+      </view>
+        </view>
+        <view class="_div data-v-36a339ed space"></view>
+        <view class="_div data-v-36a339ed result3">
+            <view class="_div data-v-36a339ed result3-title">职业描述</view>
+            <view class="_div data-v-36a339ed result3-title1">
+                <image class="_img data-v-36a339ed result3-img" src="/static/images/fen1.png"></image>
+                <label class="_span data-v-36a339ed result3-span">工作优势</label>
+            </view>
+            <view class="_div data-v-36a339ed result3-content">
+        {{desc.position_goodness_content}}
+      </view>
+            <view class="_div data-v-36a339ed result3-title1">
+                <image class="_img data-v-36a339ed result3-img" src="/static/images/fen2.png"></image>
+                <label class="_span data-v-36a339ed result3-span">工作劣势</label>
+            </view>
+            <view class="_div data-v-36a339ed result3-content">
+        {{desc.position_infer_content}}
+      </view>
+            <view class="_div data-v-36a339ed result3-title1">
+                <image class="_img data-v-36a339ed result3-img" src="/static/images/fen3.png"></image>
+                <label class="_span data-v-36a339ed result3-span">岗位特征</label>
+            </view>
+            <view class="_div data-v-36a339ed result3-content">
+        {{desc.job_content}}
+      </view>
+        </view>
+        <view class="_div data-v-36a339ed space"></view>
+        <view class="_div data-v-36a339ed result3">
+            <view class="_div data-v-36a339ed result3-title">就业方向</view>
+            <view class="_div data-v-36a339ed result3-title1">
+                <image class="_img data-v-36a339ed result3-img" src="/static/images/fen1.png"></image>
+                <label class="_span data-v-36a339ed result3-span">就业方向</label>
+            </view>
+            <view class="_div data-v-36a339ed result3-content">
+        {{desc.career_direction_content}}
+      </view>
+        </view>
+        <view class="_div data-v-36a339ed space"></view>
+        <view class="_div data-v-36a339ed result3">
+            <view class="_div data-v-36a339ed result3-title">发展建议</view>
+            <view class="_div data-v-36a339ed result3-title1">
+                <image class="_img data-v-36a339ed result3-img" src="/static/images/fen1.png"></image>
+                <label class="_span data-v-36a339ed result3-span">发展建议</label>
+            </view>
+            <view class="_div data-v-36a339ed result3-content">
+        {{desc.result}}
+      </view>
+        </view>
+        <view class="_div data-v-36a339ed space"></view>
+    </view>
+</template>

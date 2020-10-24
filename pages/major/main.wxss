@@ -1,0 +1,52 @@
+@import "../html/article/main.wxss";
+
+.center {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.fouth {
+    width: 100%;
+    float: left;
+    height: 60rpx;
+}
+
+.line {
+    border-top: .2rem solid #3b9aff;
+    border-bottom: .1rem solid #eee;
+}
+
+.line_text {
+    margin: .6rem auto .6rem .8rem;
+    font-weight: 700;
+}
+
+.yuanquan0 {
+    background: #f90;
+    border: .02rem solid #f90;
+    border-radius: 50%;
+}
+
+.yuanquan,.yuanquan0 {
+    display: block;
+    width: .7rem;
+    height: .7rem;
+    text-align: center;
+    float: left;
+    margin-top: .6rem;
+    font-size: .5rem;
+    color: #fff;
+}
+
+.yuanquan {
+    background: #3b9aff;
+    border: .02rem solid #3b9aff;
+    border-radius: 50%;
+}
+
+.y_text {
+    float: left;
+    margin-left: .2rem;
+    color: #3b9aff;
+    line-height: 60rpx;
+}

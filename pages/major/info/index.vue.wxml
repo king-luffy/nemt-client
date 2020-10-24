@@ -1,0 +1,75 @@
+<template name="39fd60d8">
+    <view class="_div data-v-742425c8 box">
+        <view class="_div data-v-742425c8 title1">
+            <view class="_div data-v-742425c8 title1_span">{{title}}</view>
+            <view class="_div data-v-742425c8 title1_span2">{{code}}</view>
+            <view class="_div data-v-742425c8 title1_span3">{{years}} | {{degree}}</view>
+        </view>
+        <view class="_div data-v-742425c8 title2">
+            <view class="_div data-v-742425c8 info">
+                <view bindtap="handleProxy" class="_div data-v-742425c8 {{[ 'info-title',[show?'info-b':''] ]}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">基本信息</view>
+                <view bindtap="handleProxy" class="_div data-v-742425c8 {{[ 'info-title',[show==false?'info-b':''] ]}}" data-comkey="{{$k}}" data-eventid="{{'1'}}">就业情况</view>
+            </view>
+            <view class="_div data-v-742425c8 title3" wx:if="{{show}}">
+                <view class="_div data-v-742425c8 title t2" wx:if="{{course}}">
+                    <image class="_img data-v-742425c8 title_img" src="/static/images/sj.png"></image>
+                    <view class="_div data-v-742425c8 title_div">专业课程</view>
+                </view>
+                <view class="_div data-v-742425c8 desc" wx:if="{{course}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-742425c8 title t2">
+                    <image class="_img data-v-742425c8 title_img" src="/static/images/sj.png"></image> 专业概况
+          </view>
+                <view class="_div data-v-742425c8 desc" wx:if="{{overview}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'1'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-742425c8 desc" wx:else> 无 </view>
+                <view class="_div data-v-742425c8 title t2">
+                    <image class="_img data-v-742425c8 title_img" src="/static/images/sj.png"></image> 男女比例
+          </view>
+                <view class="_div data-v-742425c8 man">
+                    <view class="_div data-v-742425c8 man-1">
+                        <view class="_div data-v-742425c8">
+                            <image class="_img data-v-742425c8 icon" src="/static/images/boy.png"></image>
+                        </view>
+                        <view class="_div data-v-742425c8 man-title">
+                {{male}}% </view>
+                    </view>
+                    <view class="_div data-v-742425c8 man-2">
+                        <view class="_div data-v-742425c8">
+                            <image class="_img data-v-742425c8 icon" src="/static/images/girl.png"></image>
+                        </view>
+                        <view class="_div data-v-742425c8 man-title">
+                {{100-male}}% </view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-742425c8 title4" wx:else>
+                <view class="_div data-v-742425c8 title t3" wx:if="{{job}}">
+                    <image class="_img data-v-742425c8 title_img2" src="/static/images/sj.png"></image> 就业方向
+          </view>
+                <view class="_div data-v-742425c8" wx:if="{{job}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'2'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-742425c8 title t3">
+                    <image class="_img data-v-742425c8 title_img2" src="/static/images/sj.png"></image> 就业情况
+          </view>
+                <view class="_div data-v-742425c8" wx:if="{{condition}}">
+                    <template is="c0406f1e" data="{{...$root[$kk+'3'],$root:$root}}"></template>
+                </view>
+                <view class="_div data-v-742425c8 desc" wx:else> 无 </view>
+                <view class="_div data-v-742425c8 title t3">
+                    <image class="_img data-v-742425c8 title_img2" src="/static/images/sj.png"></image> 职业详情
+          </view>
+                <view class="_div data-v-742425c8">
+                    <view bindtap="handleProxy" class="_div data-v-742425c8 zhiye" data-comkey="{{$k}}" data-eventid="{{'6_'+index}}" key="{{index}}" wx:for="{{professList}}" wx:key="index">
+              {{item.name}}
+              <image class="_img data-v-742425c8 zhiye-img" src="/static/images/reture.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+<import src="/modules/mpvue-wxparse/src/wxParse.vue.wxml"></import>

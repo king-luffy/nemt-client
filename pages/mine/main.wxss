@@ -1,0 +1,187 @@
+@import "../html/article/main.wxss";
+
+.info {
+    background: #3b9aff;
+    padding: 10rpx 30rpx 0rpx;
+    box-shadow: 0 5px 10px #aaa;
+}
+
+.card,.info {
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    border-radius: 10rpx 10rpx 0 0;
+    box-shadow: 0 0 2px #aaa;
+    background: url(https://image.tianziyuan.cn/bg/m_top.jpg) no-repeat 0 0;
+    background-size: 700rpx 320rpx;
+    height: 320rpx;
+}
+
+.lal {
+    position: absolute;
+    font-size: 22rpx;
+    color: #d8cb25;
+    background: #297fe0;
+    right: 0rpx;
+    top: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 10rpx;
+    border-radius: 10rpx 0 0 10rpx;
+}
+
+.face-img {
+    margin-top: 130rpx;
+    margin-left: 230rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.card-r {
+    margin-top: -70rpx;
+    margin-left: 350rpx;
+}
+
+.name {
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.tip {
+    padding-top: 6rpx;
+}
+
+.login {
+    background: transparent;
+    font-size: 30rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    color: #fff;
+    text-align: left;
+    padding: 0 0 0 10rpx;
+}
+
+.login:after {
+    border: none;
+}
+
+.tip-txt {
+    font-size: 18rpx;
+    border-radius: 28rpx;
+    height: 28rpx;
+    padding: 0 10rpx;
+    border: 1rpx solid #d8cb25;
+    color: #d8cb25;
+    margin-left: 6rpx;
+}
+
+.tip-txt,.tip-txt2 {
+    float: left;
+    line-height: 28rpx;
+    margin-top: 10rpx;
+}
+
+.tip-txt2 {
+    font-size: 28rpx;
+    border-radius: 28rpx;
+    border: 1rpx solid #ff6100;
+    color: #ff6100;
+    margin-left: -116rpx;
+    width: 230rpx;
+    height: 33rpx;
+    text-align: center;
+}
+
+.tip-desc {
+    padding-top: 20rpx;
+    margin-left: -45rpx;
+}
+
+.tip-img {
+    float: left;
+    width: 110rpx;
+    height: 50rpx;
+    margin-left: -13rpx;
+    margin-right: -20rpx;
+}
+
+.desc {
+    font-size: 24rpx;
+    color: #d8cb25;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.foot {
+    padding: 0rpx 30rpx;
+}
+
+.fbg {
+    background: #fff;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+    padding-top: 30rpx;
+}
+
+.f-img {
+    width: 100%;
+    height: 30rpx;
+}
+
+.ls {
+    padding: 30rpx 10rpx;
+}
+
+.li {
+    padding: 22rpx;
+    height: 40rpx;
+    background: #f8f8f8;
+    border-radius: 8rpx;
+    margin-top: 30rpx;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.li-img {
+    float: left;
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.li-img2 {
+    width: 100%;
+    height: 108rpx;
+}
+
+.li-txt {
+    float: left;
+    font-size: 26rpx;
+    color: #868686;
+    padding-left: 16rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.li-r {
+    float: right;
+    width: 26rpx;
+    height: 26rpx;
+    padding-top: 6rpx;
+}
+
+button {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 10px;
+    background-color: hsla(0,0%,100%,0);
+}
+
+button:after {
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,26 @@
+<template name="55d5e189">
+    <view class="_div data-v-1d14da2a box">
+        <view class="_div data-v-1d14da2a bg-img">
+            <view class="_div data-v-1d14da2a total-title"> 总成绩：{{total}}
+        <button bindgetuserinfo="handleProxy" class="_button data-v-1d14da2a login" data-comkey="{{$k}}" data-eventid="{{'0'}}" openType="getUserInfo" wx:if="{{!userInfo}}">登录/注册</button>
+            </view>
+        </view>
+        <view class="_div data-v-1d14da2a news" wx:if="{{articleList.length>0}}">
+            <image class="_image data-v-1d14da2a news-img" src="/static/images/tequan.png"></image>
+            <swiper autoplay circular vertical class="_swiper data-v-1d14da2a news-swiper" interval="2000">
+                <swiper-item class="_swiper-item data-v-1d14da2a" key="{{idx}}" wx:for="{{articleList}}" wx:for-index="idx" wx:for-item="art" wx:key="idx">
+                    <view bindtap="handleProxy" class="_div data-v-1d14da2a news-item" data-comkey="{{$k}}" data-eventid="{{'1_'+idx}}">{{art.title}}</view>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="_div data-v-1d14da2a ls">
+            <view bindtap="handleProxy" class="_div data-v-1d14da2a li" data-comkey="{{$k}}" data-eventid="{{'2_'+index}}" key="{{index}}" wx:for="{{list}}" wx:key="index">
+                <view class="_div data-v-1d14da2a li-txt">{{item.name}}</view>
+                <view class="_div data-v-1d14da2a li-button" wx:if="{{item.score}}"> 得分:{{item.score}}
+        </view>
+                <view class="_div data-v-1d14da2a li-button" wx:else> 开始估分 </view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-1d14da2a li2" data-comkey="{{$k}}" data-eventid="{{'3'}}">去填志愿</view>
+        </view>
+    </view>
+</template>

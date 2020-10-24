@@ -1,0 +1,455 @@
+@import "../../html/article/main.wxss";
+
+.box {
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    background: #3b9aff;
+    border-radius: 12rpx;
+}
+
+.img {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 36rpx 30rpx auto 38rpx;
+    border-radius: 10rpx;
+}
+
+.name {
+    margin-top: 28rpx;
+    color: #fff;
+    font-size: 44rpx;
+    font-weight: 700;
+    margin-bottom: 5rpx;
+}
+
+.row {
+    position: relative;
+    margin: 20rpx auto;
+}
+
+.row,.row0 {
+    display: flex;
+    flex-direction: row;
+}
+
+.row0 {
+    padding-left: 30rpx;
+    padding-bottom: 50rpx;
+}
+
+.row00 {
+    margin: auto;
+}
+
+.row00,.row-blue {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-blue {
+    background: #3b9aff;
+    line-height: 60rpx;
+    width: 100%;
+}
+
+.desc {
+    border: 1rpx solid #fff;
+    border-radius: 8rpx;
+    padding-right: 20rpx;
+    padding-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.desc,.desc1 {
+    font-size: 20rpx;
+    text-align: center;
+    margin-top: 5rpx;
+    color: #fff;
+}
+
+.desc1 {
+    margin-right: 10rpx;
+    text-align: left;
+}
+
+.msg {
+    color: #fff;
+    font-size: 22rpx;
+    line-height: 40rpx;
+    margin: 20rpx auto;
+}
+
+.dw,.dw2,.dw3 {
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.dw3 {
+    margin-left: 10rpx;
+}
+
+.ls-1 {
+    margin-left: 16rpx;
+    line-height: 100rpx;
+    float: left;
+}
+
+.item {
+    margin-right: 20rpx;
+}
+
+.row-right {
+    float: right;
+    font-size: 24rpx;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+    line-height: 80rpx;
+    margin-right: 30rpx;
+    margin-top: 10rpx;
+}
+
+.text1 {
+    color: #505050;
+}
+
+.text2 {
+    color: #3b9aff;
+}
+
+.ls,.ls-2 {
+    line-height: 80rpx;
+}
+
+.ls-2 {
+    margin-right: 30rpx;
+    float: right;
+}
+
+.row-left {
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    float: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    width: 32rpx;
+    height: 32rpx;
+    line-height: 80rpx;
+    margin: auto 20rpx auto auto;
+}
+
+.ls-3 {
+    font-size: 24rpx;
+    color: #505050;
+    text-align: right;
+    margin-right: 30rpx;
+}
+
+.txt-32 {
+    font-size: 32rpx;
+    color: #505050;
+    margin-left: 8rpx;
+    margin-top: 20rpx;
+}
+
+.txt-24-grey {
+    font-size: 24rpx;
+    color: #505050;
+    margin-right: 10rpx;
+}
+
+.txt-24-blue {
+    font-size: 24rpx;
+    color: #3b9aff;
+}
+
+.block {
+    width: 40%;
+}
+
+.block,.block4 {
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 10rpx;
+}
+
+.block4 {
+    width: 50%;
+}
+
+.block3 {
+    width: 20%;
+}
+
+.block2,.block3 {
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.block2 {
+    width: 100%;
+    padding-left: 10rpx;
+}
+
+.row-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    line-height: 60rpx;
+}
+
+.line {
+    height: 2rpx;
+    background-color: #f0f0f0;
+}
+
+.content {
+    margin: auto;
+    font-size: 20rpx;
+    color: #3b9aff;
+    line-height: 40rpx;
+}
+
+.line-blue {
+    height: 0.5rpx;
+    background-color: #3b9aff;
+}
+
+.title {
+    color: #fff;
+    width: 180rpx;
+}
+
+.hang,.title {
+    font-size: 22rpx;
+    text-align: center;
+}
+
+.hang {
+    width: 200rpx;
+    color: #3b9aff;
+}
+
+.icon2 {
+    width: 38rpx;
+    height: 38rpx;
+    line-height: 80rpx;
+    margin: auto 20rpx;
+}
+
+.zi {
+    color: #505050;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    line-height: 70rpx;
+}
+
+.icon21 {
+    width: 36rpx;
+    height: 36rpx;
+    margin: 0 20rpx;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    padding-left: 30rpx;
+}
+
+.row_content {
+    border-bottom: 1px solid #efefef;
+    height: 70rpx;
+}
+
+.icon3 {
+    margin: auto 20rpx;
+}
+
+.icon3,.icon4 {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.icon4 {
+    padding-top: 10rpx;
+    padding-left: 120rpx;
+    float: right;
+}
+
+.zi2 {
+    color: #3b9aff;
+    font-size: 60rpx;
+    font-weight: 700;
+}
+
+.zi3 {
+    color: #505050;
+    font-size: 24rpx;
+}
+
+.row-white {
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    color: #3b9aff;
+    padding-left: 0rpx;
+    padding-right: 0rpx;
+    line-height: 45rpx;
+    height: 40rpx;
+    border-bottom: 1rpx solid #efefef;
+    padding-bottom: 10rpx;
+}
+
+.gf-content {
+    width: 100%;
+}
+
+.gf-content,.gf-content3 {
+    margin: 10rpx 30rpx;
+    font-size: 30rpx;
+    color: #505050;
+}
+
+.gf-content3 {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content3-img {
+    width: 35%;
+}
+
+.content3-title {
+    width: 55%;
+    word-break: break-all;
+}
+
+.progress {
+    padding-left: 100rpx;
+    width: 150rpx;
+}
+
+.zi0 {
+    color: #4c4c4c;
+}
+
+.zi0,.zi4 {
+    font-size: 60rpx;
+}
+
+.zi4 {
+    color: #e03bff;
+    font-weight: 700;
+}
+
+.info-ul {
+    display: flex;
+    flex-direction: row;
+    height: 70rpx;
+    align-items: center;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.info-li-title {
+    font-size: 28rpx;
+}
+
+.info-a {
+    margin-left: 20rpx;
+}
+
+.info-b {
+    margin-left: 10rpx;
+}
+
+.info-c {
+    margin-left: 40rpx;
+}
+
+.right {
+    float: right;
+    font-size: 24rpx;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+    line-height: 80rpx;
+    margin-right: 65rpx;
+    margin-top: 10rpx;
+}
+
+.c-title {
+    font-size: 25rpx;
+}
+
+.collection {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+    background-color: #3b9aff;
+    position: fixed;
+    top: 80%;
+    right: 5%;
+    box-shadow: 0rpx 1rpx 10rpx rgba(34,25,25,.2);
+}
+
+.collect {
+    width: 80rpx;
+    height: 80rpx;
+    padding-left: 10rpx;
+    padding-top: 7rpx;
+}
+
+.message {
+    margin-top: 20rpx;
+    border-bottom: 1rpx solid #efefef;
+}
+
+.message-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1rpx solid #eee;
+    border-left: 1rpx solid #eee;
+    border-right: 1rpx solid #eee;
+    height: 60rpx;
+}
+
+.message-a {
+    height: 60rpx;
+    width: 150rpx;
+    font-size: 25rpx;
+    color: #333;
+    border-right: 1rpx solid #eee;
+}
+
+.brief {
+    padding-top: 14rpx;
+    padding-left: 4rpx;
+}
+
+.message-b {
+    width: 170rpx;
+    height: 60rpx;
+    font-size: 25rpx;
+    color: #999;
+    text-align: left;
+    border-right: 1rpx solid #eee;
+}
+
+.gf-content2 {
+    margin: 0rpx 10rpx 10rpx 40rpx;
+    font-size: 30rpx;
+    color: #505050;
+}

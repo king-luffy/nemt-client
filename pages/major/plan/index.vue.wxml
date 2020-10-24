@@ -1,0 +1,109 @@
+<template name="77aed84f">
+    <view class="_div data-v-08d1ae83 center">
+        <view class="_div data-v-08d1ae83 tab">
+            <view bindtap="handleProxy" class="_div data-v-08d1ae83 {{activeName==='普通类'?'tab-title tab-x':'tab-title'}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">普通类</view>
+            <view bindtap="handleProxy" class="_div data-v-08d1ae83 {{activeName==='艺术类'?'tab-title tab-x':'tab-title'}}" data-comkey="{{$k}}" data-eventid="{{'1'}}">艺术类</view>
+            <view bindtap="handleProxy" class="_div data-v-08d1ae83 {{activeName==='特殊类'?'tab-title tab-x':'tab-title'}}" data-comkey="{{$k}}" data-eventid="{{'2'}}">单招/综评(专科)</view>
+        </view>
+        <picker bindchange="handleProxy" class="_picker data-v-08d1ae83" data-comkey="{{$k}}" data-eventid="{{'3'}}" range="{{oneData}}" rangeKey="position">
+            <van-cell isLink class="_van-cell data-v-08d1ae83" title="学历类型" value="{{oneValue}}"></van-cell>
+        </picker>
+        <picker bindchange="handleProxy" class="_picker data-v-08d1ae83" data-comkey="{{$k}}" data-eventid="{{'4'}}" range="{{twoData}}" rangeKey="title">
+            <van-cell isLink class="_van-cell data-v-08d1ae83" title="选科要求" value="{{twoValue}}"></van-cell>
+        </picker>
+        <picker bindchange="handleProxy" class="_picker data-v-08d1ae83" data-comkey="{{$k}}" data-eventid="{{'5'}}" range="{{fourData}}" rangeKey="batch">
+            <van-cell isLink class="_van-cell data-v-08d1ae83" title="专业批次" value="{{fourValue}}"></van-cell>
+        </picker>
+        <view class="_div data-v-08d1ae83 school_s">
+            <radio-group class="_radio-group data-v-08d1ae83">
+                <radio bindtap="handleProxy" checked="{{way==1}}" class="_radio data-v-08d1ae83" data-comkey="{{$k}}" data-eventid="{{'6'}}">搜学校</radio>
+                <radio bindtap="handleProxy" checked="{{way==0}}" class="_radio data-v-08d1ae83 ss_2" data-comkey="{{$k}}" data-eventid="{{'7'}}">搜专业</radio>
+            </radio-group>
+        </view>
+        <view class="_div data-v-08d1ae83 school_s2" wx:if="{{showfenshu==1}}">
+            <view class="_div data-v-08d1ae83 school_right1">
+                <input bindblur="handleProxy" bindinput="handleProxy" class="_input data-v-08d1ae83 bod-int bod-r" data-comkey="{{$k}}" data-eventid="{{'8'}}" placeholder="请输入最低分" type="number" value="{{start_val}}"></input>
+            </view>
+            <view class="_div data-v-08d1ae83 school_right2">-</view>
+            <view class="_div data-v-08d1ae83 school_right3">
+                <input bindblur="handleProxy" bindinput="handleProxy" class="_input data-v-08d1ae83 bod-int bod-r" data-comkey="{{$k}}" data-eventid="{{'9'}}" placeholder="请输入最高分" type="number" value="{{end_val}}"></input>
+            </view>
+        </view>
+        <van-search useActionSlot background="#3B9AFF" bindchange="handleProxy" bindsearch="handleProxy" class="_van-search data-v-08d1ae83" data-comkey="{{$k}}" data-eventid="{{'11'}}" placeholder="请输入搜索关键词" value="{{kw}}">
+            <view bindtap="handleProxy" class="_div data-v-08d1ae83" data-comkey="{{$k}}" data-eventid="{{'10'}}" slot="action">搜索</view>
+        </van-search>
+        <view class="_div data-v-08d1ae83 news">
+            <image class="_image data-v-08d1ae83 news-img" src="/static/images/tequan.png"></image>
+            <swiper autoplay circular vertical class="_swiper data-v-08d1ae83 news-swiper" interval="2000">
+                <swiper-item class="_swiper-item data-v-08d1ae83" key="{{idx}}" wx:for="{{articleList}}" wx:for-index="idx" wx:for-item="art" wx:key="idx">
+                    <view bindtap="handleProxy" class="_div data-v-08d1ae83 news-item" data-comkey="{{$k}}" data-eventid="{{'12_'+idx}}">{{art.title}}</view>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="_div data-v-08d1ae83 scholl" wx:if="{{showway==1}}">
+            <view class="_div data-v-08d1ae83 ls" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="s" wx:key="idx">
+                <image class="_img data-v-08d1ae83 s-img" src="{{s.school_logo}}"></image>
+                <view bindtap="handleProxy" class="_div data-v-08d1ae83 s-info" data-comkey="{{$k}}" data-eventid="{{'13_'+idx}}">
+                    <view class="_div data-v-08d1ae83 s-name">
+                        <view class="_div data-v-08d1ae83 s-bd">{{s.school_name}} {{s.school_number}}</view>
+                        <view class="_div data-v-08d1ae83" style="clear: both"></view>
+                    </view>
+                    <view class="_div data-v-08d1ae83 s-tag">
+                        <view class="_div data-v-08d1ae83" style="clear: both"></view>
+                    </view>
+                </view>
+                <view class="_div data-v-08d1ae83 line">
+                    <view class="_div data-v-08d1ae83 line_text">招生计划：</view>
+                    <view class="_div data-v-08d1ae83 line_text">以上数据仅供参考 一切以考试院公布的数据为准</view>
+                </view>
+                <view class="_div data-v-08d1ae83 zhuanye" style="width: 100%" wx:for="{{s.major}}" wx:for-index="idx1" wx:for-item="s1">
+                    <view class="_div data-v-08d1ae83 zhuanye_left1">-</view>
+                    <view class="_div data-v-08d1ae83 zhuanye_left">{{s1.major_name}}</view>
+                    <view class="_div data-v-08d1ae83" style="clear: both"></view>
+                </view>
+                <view class="_div data-v-08d1ae83 line_bottom"></view>
+            </view>
+            <template is="7671932c" data="{{...$root[$kk+'6'],$root:$root}}" wx:if="{{list.length<=0}}"></template>
+            <template is="577b3842" data="{{...$root[$kk+'7'],$root:$root}}" wx:if="{{list.length>1}}"></template>
+            <template is="2d4d433e" data="{{...$root[$kk+'8'],$root:$root}}" wx:if="{{isLoad}}"></template>
+        </view>
+        <view class="_div data-v-08d1ae83 major" wx:else>
+            <view class="_div data-v-08d1ae83 lss" key="{{idx}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="s" wx:key="idx">
+                <view class="_div data-v-08d1ae83 s_zhuanye">
+                    <view class="_div data-v-08d1ae83 zhuanye_left1">-</view>
+                    <view class="_div data-v-08d1ae83 zhuanye_left">{{s.major_name}}</view>
+                </view>
+                <view bindtap="handleProxy" class="_div data-v-08d1ae83 s_zhuanye" data-comkey="{{$k}}" data-eventid="{{'14_'+idx}}">
+                    <view class="_div data-v-08d1ae83 s_zhuanye1">
+                        <image class="_img data-v-08d1ae83 s1-img" src="{{s.school_logo}}"></image>
+                    </view>
+                    <view class="_div data-v-08d1ae83 s_zhuanye2">{{s.school_name}} {{s.school_number}}</view>
+                    <view class="_div data-v-08d1ae83 s_zhuanye1"></view>
+                    <view class="_div data-v-08d1ae83" style="clear: both"></view>
+                </view>
+            </view>
+            <template is="7671932c" data="{{...$root[$kk+'9'],$root:$root}}" wx:if="{{list.length<=0}}"></template>
+            <template is="577b3842" data="{{...$root[$kk+'10'],$root:$root}}" wx:if="{{list.length>1}}"></template>
+            <template is="2d4d433e" data="{{...$root[$kk+'11'],$root:$root}}" wx:if="{{isLoad}}"></template>
+        </view>
+        <view bindcatchtouchmove="handleProxy" bindtap="handleProxy" class="_div data-v-08d1ae83 modal-mask" data-comkey="{{$k}}" data-eventid="{{'15'}}" wx:if="{{showModal}}"></view>
+        <view class="_div data-v-08d1ae83 modal-dialog" wx:if="{{showModal}}">
+            <view class="_div data-v-08d1ae83 modal-title">激活码</view>
+            <view class="_div data-v-08d1ae83 modal-content">
+                <view class="_div data-v-08d1ae83 modal-input">
+                    <input bindinput="handleProxy" class="_input data-v-08d1ae83 input" data-comkey="{{$k}}" data-eventid="{{'16'}}" placeholder="请输入激活码" placeholderClass="input-holder" type="text" value="{{code}}"></input>
+                </view>
+            </view>
+            <view class="_div data-v-08d1ae83 modal-footer">
+                <view bindtap="handleProxy" class="_div data-v-08d1ae83 btn-confirm" data-comkey="{{$k}}" data-eventid="{{'17'}}" data-status="confirm">激活使用</view>
+                <view bindtap="handleProxy" class="_div data-v-08d1ae83 btn-cancel" data-comkey="{{$k}}" data-eventid="{{'18'}}" data-status="cancel">取消</view>
+            </view>
+            <view class="_div data-v-08d1ae83 modal-footer">
+                <view bindtap="handleProxy" class="_div data-v-08d1ae83 btn-confirm2" data-comkey="{{$k}}" data-eventid="{{'19'}}" data-status="confirm">没有激活码怎么办？</view>
+            </view>
+        </view>
+    </view>
+</template>
+<import src="/components/nodata.vue.wxml"></import>
+<import src="/components/reach.vue.wxml"></import>
+<import src="/components/initing.vue.wxml"></import>

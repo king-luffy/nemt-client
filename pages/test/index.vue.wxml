@@ -1,0 +1,28 @@
+<template name="779b15b5">
+    <view class="_div data-v-178ab856 box">
+        <view class="_div data-v-178ab856 nav">
+            <image class="_img data-v-178ab856 bj" src="/static/images/bjf.png"></image>
+            <view class="_div data-v-178ab856 info"> 高考志愿的填报，选择合适的专业很重要。大学专业不仅仅关系到我们未来四年的学习以及职业素养的培养，将来毕业也能找一份自己喜欢的工作。我们通过研究国际权威的测评模型，从职业性格、兴趣的角度推荐适合的专业，帮你科学的选择专业。 </view>
+        </view>
+        <view class="_div data-v-178ab856 ls">
+            <view bindtap="handleProxy" class="_div data-v-178ab856 li" data-comkey="{{$k}}" data-eventid="{{'0_'+index}}" key="{{index}}" wx:for="{{list}}" wx:key="index">
+                <view class="_div data-v-178ab856 li-txt">{{item.name}}</view>
+                <view class="_div data-v-178ab856 li-button"> 开始测评 </view>
+            </view>
+        </view>
+        <view class="_div data-v-178ab856 ls">
+            <view bindtap="handleProxy" class="_div data-v-178ab856 li" data-comkey="{{$k}}" data-eventid="{{'1'}}" style="background: #ec5300" wx:if="{{result1}}">
+                <view class="_div data-v-178ab856 li-txt">MBTI测试结果</view>
+                <view class="_div data-v-178ab856 li-button">
+          {{result1.result}}
+        </view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-178ab856 li" data-comkey="{{$k}}" data-eventid="{{'2'}}" style="background: #ec5300" wx:if="{{result2}}">
+                <view class="_div data-v-178ab856 li-txt">霍兰德测试结果</view>
+                <view class="_div data-v-178ab856 li-button">
+          {{result2.result}}
+        </view>
+            </view>
+        </view>
+    </view>
+</template>

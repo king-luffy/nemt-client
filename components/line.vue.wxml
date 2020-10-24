@@ -1,0 +1,12 @@
+<template name="330397f5">
+    <view class="_div data-v-0d310e27">
+        <view class="_div data-v-0d310e27 bottom-line">
+            <view class="_div data-v-0d310e27 lining">
+                <view class="_div data-v-0d310e27 lining-md"></view>
+                <view class="_div data-v-0d310e27 lining-above">
+                    <view class="_div data-v-0d310e27 lining-txt" style=" {{'background:'+bg+';'}}">{{text}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

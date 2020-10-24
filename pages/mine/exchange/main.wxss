@@ -1,0 +1,151 @@
+@import "../../html/article/main.wxss";
+
+.box {
+    padding: 0 30rpx;
+}
+
+.exchange {
+    padding: 100rpx 50rpx;
+}
+
+.exchange-txt {
+    color: #505050;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: left;
+}
+
+.exchange-input {
+    padding-top: 50rpx;
+}
+
+.exchange-input input {
+    width: 600rpx;
+    height: 60rpx;
+    color: #b1b1b1;
+    background-color: #fff;
+    font-size: 12px;
+    text-align: left;
+    border: 1rpx solid #dedede;
+    border-radius: 10rpx;
+}
+
+.exchange-button {
+    padding-top: 50rpx;
+}
+
+.exchange-button button {
+    width: 242px;
+    color: #fff;
+    background-color: #2a82e4;
+    border-radius: 23px;
+    font-size: 16px;
+}
+
+.exchange-button2 {
+    padding-top: 50rpx;
+}
+
+.exchange-button2 button {
+    width: 242px;
+    color: #fff;
+    background-color: #2a82e4;
+    border-radius: 23px;
+    font-size: 16px;
+}
+
+.info {
+    background: #3b9aff;
+    box-shadow: 0 5px 10px #aaa;
+}
+
+.card,.info {
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    border-radius: 10rpx 10rpx 0 0;
+    box-shadow: 0 0 2px #aaa;
+    background: url(https://image.tianziyuan.cn/bg/m_top.jpg) no-repeat 0 0;
+    background-size: 700rpx 320rpx;
+    height: 320rpx;
+}
+
+.lal {
+    position: absolute;
+    font-size: 22rpx;
+    color: #d8cb25;
+    background: #297fe0;
+    right: 0rpx;
+    top: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 10rpx;
+    border-radius: 10rpx 0 0 10rpx;
+}
+
+.face-img {
+    margin-top: 130rpx;
+    margin-left: 230rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.card-r {
+    margin-top: -70rpx;
+    margin-left: 350rpx;
+}
+
+.login,.name {
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.login {
+    background: transparent;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: left;
+    padding: 0 0 0 10rpx;
+}
+
+.login:after {
+    border: none;
+}
+
+.tip-desc {
+    padding-top: 20rpx;
+    margin-left: -45rpx;
+}
+
+.tip-img {
+    float: left;
+    width: 110rpx;
+    height: 50rpx;
+    margin-left: -13rpx;
+    margin-right: -20rpx;
+}
+
+.desc {
+    font-size: 24rpx;
+    color: #d8cb25;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.card-r button {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 10px;
+    background-color: hsla(0,0%,100%,0);
+}
+
+.card-r button:after {
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+}

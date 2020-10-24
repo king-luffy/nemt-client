@@ -1,0 +1,55 @@
+@import "../../html/article/main.wxss";
+
+.box {
+    padding: 0 30rpx;
+}
+
+.art {
+    padding: 60rpx 0 0;
+    height: 180rpx;
+    border: 3rpx solid #f0f0f0;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    border-radius: 10rpx;
+}
+
+.art-img {
+    float: left;
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 70rpx;
+    border-radius: 50rpx;
+}
+
+.art-txt {
+    padding-left: 225rpx;
+    padding-top: 10rpx;
+}
+
+.art-tt {
+    font-size: 30rpx;
+    line-height: 40rpx;
+    max-height: 80rpx;
+}
+
+.art-ds,.art-tt {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.art-ds {
+    color: #8e8e8e;
+    padding-top: 15rpx;
+    font-size: 24rpx;
+    line-height: 35rpx;
+    max-height: 70rpx;
+}
+
+.nodata image {
+    width: 100rpx;
+    height: 100rpx;
+}

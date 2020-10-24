@@ -1,0 +1,109 @@
+@import "../html/article/main.wxss";
+
+.ls {
+    justify-content: space-around;
+}
+
+.li,.ls {
+    display: flex;
+    align-items: center;
+}
+
+.li {
+    padding: 22rpx;
+    height: 200rpx;
+    background: #297fe0;
+    border-radius: 8rpx;
+    margin-top: 30rpx;
+    box-shadow: 0 2px 5px #ccc;
+    width: 300rpx;
+    text-align: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.li-img {
+    float: left;
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.li-img2 {
+    width: 100%;
+    height: 108rpx;
+}
+
+.li-txt {
+    float: center;
+    font-size: 30rpx;
+    color: #fff;
+    height: 40rpx;
+    font-weight: 600;
+}
+
+.li-r {
+    width: 26rpx;
+    height: 26rpx;
+    padding-top: 8rpx;
+}
+
+button {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 10px;
+    background-color: hsla(0,0%,100%,0);
+}
+
+button:after {
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    position: relative;
+}
+
+.bj,.nav {
+    width: 100%;
+    height: 400rpx;
+}
+
+.bj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.info {
+    position: relative;
+    width: 90%;
+    height: 300rpx;
+    font-size: 32rpx;
+    font-weight: 400;
+    color: #89501d;
+    line-height: 50rpx;
+    padding: 25rpx 25rpx 30rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    margin: 0rpx auto 0;
+    text-align: justify;
+    text-align-last: left;
+    z-index: 9;
+}
+
+.li-button {
+    margin-top: 20rpx;
+    width: 180rpx;
+    background-color: #fff;
+    height: 50rpx;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    color: #ec5300;
+    line-height: 45rpx;
+}

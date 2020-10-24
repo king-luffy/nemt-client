@@ -1,0 +1,7 @@
+<template name="7671932c">
+    <view class="_div data-v-7b1a44de">
+        <view class="_div data-v-7b1a44de sno">
+            <image class="_img data-v-7b1a44de no-data" src="/static/images/nodata.png"></image>
+        </view>
+    </view>
+</template>

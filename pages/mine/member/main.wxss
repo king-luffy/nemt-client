@@ -1,0 +1,80 @@
+@import "../../html/article/main.wxss";
+
+.box {
+    padding: 0 30rpx;
+}
+
+.bg_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+.bg_box>image {
+    width: 100%;
+    height: 100%;
+}
+
+.mem-title {
+    top: 400rpx;
+    font-weight: 700;
+}
+
+.mem-content,.mem-title {
+    position: absolute;
+    left: 100rpx;
+    z-index: 1;
+    color: #fff;
+    font-size: 16px;
+}
+
+.mem-content {
+    top: 500rpx;
+    line-height: 60rpx;
+    width: 82vw;
+}
+
+.mem-title2 {
+    top: 700rpx;
+    font-weight: 700;
+}
+
+.mem-content2,.mem-title2 {
+    position: absolute;
+    left: 100rpx;
+    z-index: 1;
+    color: #fff;
+    font-size: 16px;
+}
+
+.mem-content2 {
+    top: 800rpx;
+    line-height: 60rpx;
+    width: 82vw;
+}
+
+.mem-money {
+    top: 900rpx;
+    left: 170rpx;
+    font-size: 30px;
+    line-height: 150%;
+    font-weight: 700;
+}
+
+.mem-money,.opening {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+}
+
+.opening {
+    top: 1000rpx;
+    left: 150rpx;
+    width: 242px;
+    height: 38px;
+    background-color: #2a82e4;
+    border-radius: 23px;
+    font-size: 16px;
+}

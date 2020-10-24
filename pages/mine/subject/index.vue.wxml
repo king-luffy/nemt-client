@@ -1,0 +1,34 @@
+<template name="46d2e186">
+    <view class="_div data-v-242170b4 box">
+        <view class="_div data-v-242170b4 exchange">
+            <view class="_div data-v-242170b4 exchange-txt"> 选择科目： </view>
+            <view class="_div data-v-242170b4 exchange-input">
+                <van-checkbox-group bindchange="handleProxy" class="_van-checkbox-group data-v-242170b4" data-comkey="{{$k}}" data-eventid="{{'0'}}" max="3" min="3" value="{{result}}">
+                    <view class="_div data-v-242170b4 bod-r-i">
+                        <view class="_div data-v-242170b4 bod-r-c">
+                            <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-242170b4" name="物理">物理</van-checkbox>
+                        </view>
+                        <view class="_div data-v-242170b4 bod-r-c">
+                            <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-242170b4" name="化学">化学</van-checkbox>
+                        </view>
+                        <view class="_div data-v-242170b4 bod-r-c">
+                            <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-242170b4" name="生物">生物</van-checkbox>
+                        </view>
+                        <view class="_div data-v-242170b4 bod-r-c">
+                            <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-242170b4" name="政治">政治</van-checkbox>
+                        </view>
+                        <view class="_div data-v-242170b4 bod-r-c">
+                            <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-242170b4" name="历史">历史</van-checkbox>
+                        </view>
+                        <view class="_div data-v-242170b4 bod-r-c">
+                            <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-242170b4" name="地理">地理</van-checkbox>
+                        </view>
+                    </view>
+                </van-checkbox-group>
+            </view>
+            <view class="_div data-v-242170b4 exchange-button">
+                <button bindtap="handleProxy" class="_button data-v-242170b4" data-comkey="{{$k}}" data-eventid="{{'1'}}" type="button">提交</button>
+            </view>
+        </view>
+    </view>
+</template>

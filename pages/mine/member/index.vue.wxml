@@ -1,0 +1,9 @@
+<template name="3afea85c">
+    <view class="_div data-v-fb6dc7b0 box">
+        <view class="_div data-v-fb6dc7b0 bg_box">
+            <image class="_img data-v-fb6dc7b0" src="https://image.tianziyuan.cn/bg/bg.png"></image>
+            <view class="_div data-v-fb6dc7b0 mem-title"> VIP 规则: </view>
+            <view class="_div data-v-fb6dc7b0 mem-content">      开通Vip可以使用本程序的所有高级功能，有效期为开通之日起{{days}}天 </view>
+        </view>
+    </view>
+</template>

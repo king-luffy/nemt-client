@@ -1,0 +1,17 @@
+<template name="f692544c">
+    <view class="_div data-v-2e4ba266 box">
+        <view class="_div data-v-2e4ba266 info-head">
+            <view class="_div data-v-2e4ba266 info-title">{{info.title}}</view>
+            <view class="_div data-v-2e4ba266 info-row">
+                <view class="_p data-v-2e4ba266 info-from">{{info.author}}</view>
+                <view class="_p data-v-2e4ba266 info-date">{{info.createtimetext}}</view>
+            </view>
+        </view>
+        <view class="_div data-v-2e4ba266 content">
+            <template is="c0406f1e" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        </view>
+        <template is="2d4d433e" data="{{...$root[$kk+'1'],$root:$root}}" wx:if="{{isWait}}"></template>
+    </view>
+</template>
+<import src="/modules/mpvue-wxparse/src/wxParse.vue.wxml"></import>
+<import src="/components/initing.vue.wxml"></import>

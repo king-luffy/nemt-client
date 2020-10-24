@@ -1,0 +1,191 @@
+<template name="47237f2a">
+    <view class="_div data-v-75bd7b64 center">
+        <view class="_div data-v-75bd7b64 new-bg">
+            <view class="_div data-v-75bd7b64 new-kao">
+                <view class="_div data-v-75bd7b64 new-gao">{{distance}} {{days}} DAYS</view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-75bd7b64 search_bg" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                <view class="_div data-v-75bd7b64 search">
+                    <image class="_img data-v-75bd7b64 search_img" src="/static/images/index_search.png"></image>搜索大学
+        </view>
+            </view>
+            <view class="_div data-v-75bd7b64 new-title">
+                <view class="_div data-v-75bd7b64 title1">
+                    <view class="_div data-v-75bd7b64">{{title}}</view>
+                    <view class="_div data-v-75bd7b64 title1-x"></view>
+                </view>
+                <view class="_div data-v-75bd7b64 title2">
+                    <view class="_div data-v-75bd7b64 title2-x"></view>
+                    <view class="_div data-v-75bd7b64">{{title2}}</view>
+                </view>
+            </view>
+            <!-- <view class="_div data-v-75bd7b64 new-list">
+                <view class="_div data-v-75bd7b64 list">
+                    <view bindtap="handleProxy" class="_div data-v-75bd7b64 li" data-comkey="{{$k}}" data-eventid="{{'1_'+index}}" key="{{index}}" wx:for="{{menuList}}" wx:key="index">
+                        <view class="_div data-v-75bd7b64">
+                            <image class="_img data-v-75bd7b64" src="{{item.image}}"></image>
+                        </view>
+                        <view class="_div data-v-75bd7b64 li-title">{{item.title}}</view>
+                    </view>
+                </view>
+            </view> -->
+        </view>
+        <view class="_div data-v-75bd7b64 tabs">
+            <view class="_div data-v-75bd7b64 tab-box">
+                <view class="_div data-v-75bd7b64 tab-head">
+                    <van-row class="_van-row data-v-75bd7b64">
+                        <van-col class="_van-col data-v-75bd7b64" span="24">
+                            <view bindtap="handleProxy" class="_div data-v-75bd7b64 tab-head-ls {{subject=='w'?'tab-active':''}}" data-comkey="{{$k}}" data-eventid="{{'2'}}"> 夏季高考 </view>
+                        </van-col>
+                    </van-row>
+                </view>
+                <view class="_div data-v-75bd7b64 tab-body">
+                    <view class="_div data-v-75bd7b64 bod-ls">
+                        <view class="_p data-v-75bd7b64 bod-l">生源地</view>
+                        <view class="_div data-v-75bd7b64 bod-r">河南</view>
+                    </view>
+                    <view class="_div data-v-75bd7b64 bod-ls" wx:if="{{subject=='c'}}">
+                        <picker bindchange="handleProxy" class="_picker data-v-75bd7b64" data-comkey="{{$k}}" data-eventid="{{'3'}}" range="{{chunList}}">
+                            <view class="_p data-v-75bd7b64 bod-l">春考类别</view>
+                            <view class="_div data-v-75bd7b64 bod-r">{{chun?chun:'点击选择'}}</view>
+                        </picker>
+                    </view>
+                    <view class="_div data-v-75bd7b64 bod-ls">
+                        <view class="_p data-v-75bd7b64 bod-l">选择查询方式</view>
+                        <view class="_div data-v-75bd7b64 bod-r">
+                            <radio-group class="_radio-group data-v-75bd7b64">
+                                <radio bindtap="handleProxy" checked="{{way}}" class="_radio data-v-75bd7b64" data-comkey="{{$k}}" data-eventid="{{'4'}}">总分</radio>
+                                <!-- <radio bindtap="handleProxy" checked="{{!way}}" class="_radio data-v-75bd7b64" data-comkey="{{$k}}" data-eventid="{{'5'}}" wx:if="{{subject!='c'}}">名次</radio> -->
+                            </radio-group>
+                        </view>
+                    </view>
+                    <view class="_div data-v-75bd7b64 bod-lsn" wx:if="{{subject=='w'}}">
+                        <view class="_p data-v-75bd7b64 bod-l">选科<button bindtap="handleProxy" class="_button data-v-75bd7b64 commt-btn2" data-comkey="{{$k}}" data-eventid="{{'6'}}"> 清空</button>
+                        </view>
+                        <view class="_div data-v-75bd7b64 bod-r">
+                            <van-checkbox-group bindchange="handleProxy" class="_van-checkbox-group data-v-75bd7b64" data-comkey="{{$k}}" data-eventid="{{'7'}}" max="3" value="{{result}}">
+                                <view class="_div data-v-75bd7b64 bod-r-i" style="margin-top:54rpx">
+                                    <view class="_div data-v-75bd7b64 bod-r-c">
+                                        <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-75bd7b64" name="理科综合">理综</van-checkbox>
+                                    </view>
+                                    <!-- <view class="_div data-v-75bd7b64 bod-r-c">
+                                        <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-75bd7b64" name="化学">文综</van-checkbox>
+                                    </view>
+                                    <view class="_div data-v-75bd7b64 bod-r-c">
+                                        <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-75bd7b64" name="生物">生物</van-checkbox>
+                                    </view>
+                                    <view class="_div data-v-75bd7b64 bod-r-c">
+                                        <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-75bd7b64" name="政治">政治</van-checkbox>
+                                    </view>
+                                    <view class="_div data-v-75bd7b64 bod-r-c">
+                                        <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-75bd7b64" name="历史">历史</van-checkbox>
+                                    </view>
+                                    <view class="_div data-v-75bd7b64 bod-r-c">
+                                        <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-75bd7b64" name="地理">地理</van-checkbox>
+                                    </view> -->
+
+                                     <view class="_div data-v-75bd7b64 bod-r-c">
+                                        <van-checkbox checkedColor="#3B9AFF" class="_van-checkbox data-v-75bd7b64" name="文科综合">文综</van-checkbox>
+                                    </view>
+                                </view>
+                            </van-checkbox-group>
+                        </view>
+                    </view>
+                    <view class="_div data-v-75bd7b64 bod-ls">
+                        <view class="_p data-v-75bd7b64 bod-l">{{way?'总分':'位次'}}</view>
+                        <input bindinput="handleProxy" class="_input data-v-75bd7b64 bod-int bod-r" data-comkey="{{$k}}" data-eventid="{{'8'}}" placeholder="{{way?'请输入高考总分':'请输入位次'}}" type="number" value="{{val}}"></input>
+                    </view>
+                    <view class="_div data-v-75bd7b64 bod-ls">
+                        <view class="_p data-v-75bd7b64 bod-l">浮动区间</view>
+                        <input bindinput="handleProxy" class="_input data-v-75bd7b64 bod-int bod-r" data-comkey="{{$k}}" data-eventid="{{'9'}}" placeholder="{{way?'请输入分数浮动区间':'请输入位次浮动区间'}}" type="number" value="{{section}}"></input>
+                    </view>
+                    <view class="_div data-v-75bd7b64 bod-ls">
+                        <view class="_p data-v-75bd7b64 bod-l">报考类别</view>
+                        <view class="_div data-v-75bd7b64 bod-r">
+                            <radio-group class="_radio-group data-v-75bd7b64">
+                                <radio bindtap="handleProxy" checked="{{cate}}" class="_radio data-v-75bd7b64" data-comkey="{{$k}}" data-eventid="{{'10'}}">本科</radio>
+                                <radio bindtap="handleProxy" checked="{{!cate}}" class="_radio data-v-75bd7b64" data-comkey="{{$k}}" data-eventid="{{'11'}}">专科</radio>
+                            </radio-group>
+                        </view>
+                    </view>
+                    <view class="_div data-v-75bd7b64 commt">
+                        <button bindgetuserinfo="handleProxy" class="_button data-v-75bd7b64 commt-btn" data-comkey="{{$k}}" data-eventid="{{'12'}}" openType="getUserInfo"> 立即填报</button>
+                        <view class="_div data-v-75bd7b64 commt-txt">系统内数据仅供参考</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-75bd7b64 news" wx:if="{{articleList.length>0}}">
+            <image class="_image data-v-75bd7b64 news-img" src="/static/images/kuaibao.png"></image>
+            <swiper autoplay circular vertical class="_swiper data-v-75bd7b64 news-swiper" interval="2000">
+                <swiper-item class="_swiper-item data-v-75bd7b64" key="{{idx}}" wx:for="{{articleList}}" wx:for-index="idx" wx:for-item="art" wx:key="idx">
+                    <view bindtap="handleProxy" class="_div data-v-75bd7b64 news-item" data-comkey="{{$k}}" data-eventid="{{'13_'+idx}}">{{art.title}}</view>
+                </swiper-item>
+            </swiper>
+        </view>
+        <swiper autoplay circular indicatorDots class="_swiper data-v-75bd7b64 swip" duration="900" indicatorActiveColor="#3B9AFF" interval="2000">
+            <swiper-item class="_swiper-item data-v-75bd7b64" key="{{idx}}" wx:for="{{adList}}" wx:for-index="idx" wx:for-item="img" wx:key="idx">
+                <image bindtap="handleProxy" class="_image data-v-75bd7b64 top-swiper" data-comkey="{{$k}}" data-eventid="{{'14_'+idx}}" model="scaleToFil" src="{{img.image}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class="_div data-v-75bd7b64" wx:if="{{btmList.length>0}}">
+            <view class="_div data-v-75bd7b64 servce-title">服务项目</view>
+            <view class="_div data-v-75bd7b64 serve-box">
+                <image bindtap="handleProxy" class="_img data-v-75bd7b64 serve-ls" data-comkey="{{$k}}" data-eventid="{{'15_'+idx}}" key="{{idx}}" src="{{ser.image}}" wx:for="{{btmList}}" wx:for-index="idx" wx:for-item="ser" wx:key="idx"></image>
+            </view>
+        </view>
+        <view class="_div data-v-75bd7b64 info">
+            <view bindtap="handleProxy" class="_div data-v-75bd7b64 {{[ 'info-title',[show?'info-b':''] ]}}" data-comkey="{{$k}}" data-eventid="{{'16'}}">高考政策</view>
+            <view bindtap="handleProxy" class="_div data-v-75bd7b64 {{[ 'info-title',[show==false?'info-b':''] ]}}" data-comkey="{{$k}}" data-eventid="{{'17'}}">考试信息</view>
+        </view>
+        <view class="_div data-v-75bd7b64 box" wx:if="{{show}}">
+            <view class="_div data-v-75bd7b64" key="{{idx}}" wx:for="{{policyList}}" wx:for-index="idx" wx:key="idx">
+                <view bindtap="handleProxy" class="_div data-v-75bd7b64 art" data-comkey="{{$k}}" data-eventid="{{'18_'+idx}}">
+                    <image class="_img data-v-75bd7b64 art-img" src="{{item.image}}"></image>
+                    <view class="_div data-v-75bd7b64 art-txt">
+                        <view class="_div data-v-75bd7b64 art-tt">{{item.title}}</view>
+                        <view class="_div data-v-75bd7b64 art-ds">{{item.description}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-75bd7b64 box" wx:else>
+            <view class="_div data-v-75bd7b64" key="{{idx}}" wx:for="{{infoList}}" wx:for-index="idx" wx:key="idx">
+                <view bindtap="handleProxy" class="_div data-v-75bd7b64 art" data-comkey="{{$k}}" data-eventid="{{'19_'+idx}}">
+                    <image class="_img data-v-75bd7b64 art-img" src="{{item.image}}"></image>
+                    <view class="_div data-v-75bd7b64 art-txt">
+                        <view class="_div data-v-75bd7b64 art-tt">{{item.title}}</view>
+                        <view class="_div data-v-75bd7b64 art-ds">{{item.description}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindcatchtouchmove="handleProxy" bindtap="handleProxy" class="_div data-v-75bd7b64 modal-mask" data-comkey="{{$k}}" data-eventid="{{'20'}}" wx:if="{{showModal}}"></view>
+        <view class="_div data-v-75bd7b64 modal-dialog" wx:if="{{showModal}}">
+            <view class="_div data-v-75bd7b64 modal-title">激活码</view>
+            <view class="_div data-v-75bd7b64 modal-content">
+                <view class="_div data-v-75bd7b64 modal-input">
+                    <input bindinput="handleProxy" class="_input data-v-75bd7b64 input" data-comkey="{{$k}}" data-eventid="{{'21'}}" placeholder="请输入激活码" placeholderClass="input-holder" type="text" value="{{code}}"></input>
+                </view>
+            </view>
+            <view class="_div data-v-75bd7b64 modal-footer">
+                <view bindtap="handleProxy" class="_div data-v-75bd7b64 btn-confirm" data-comkey="{{$k}}" data-eventid="{{'22'}}" data-status="confirm">激活使用</view>
+                <view bindtap="handleProxy" class="_div data-v-75bd7b64 btn-cancel" data-comkey="{{$k}}" data-eventid="{{'23'}}" data-status="cancel">取消</view>
+            </view>
+            <view class="_div data-v-75bd7b64 modal-footer">
+                <view bindtap="handleProxy" class="_div data-v-75bd7b64 btn-confirm2" data-comkey="{{$k}}" data-eventid="{{'24'}}" data-status="confirm">免费领取激活码</view>
+            </view>
+        </view>
+        <template is="2d4d433e" data="{{...$root[$kk+'13'],$root:$root}}" wx:if="{{isWait}}"></template>
+        <view class="_div data-v-75bd7b64 ad_new" style=" {{'display:'+ad_new}}">
+            <view class="_div data-v-75bd7b64 ad_content">
+                <image class="_img data-v-75bd7b64 ad_img" src="{{ad_news.image}}"></image>
+                <view class="_div data-v-75bd7b64 ad_title">{{ad_news.title}}</view>
+                <view class="_div data-v-75bd7b64 ad_desc">{{ad_news.description}}</view>
+                <view bindtap="handleProxy" class="_div data-v-75bd7b64 ad_botton" data-comkey="{{$k}}" data-eventid="{{'25'}}">查看详情</view>
+            </view>
+            <view bindtap="handleProxy" class="_div data-v-75bd7b64 ad_close" data-comkey="{{$k}}" data-eventid="{{'26'}}">x</view>
+        </view>
+    </view>
+</template>
+<import src="/components/initing.vue.wxml"></import>

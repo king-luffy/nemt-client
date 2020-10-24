@@ -1,0 +1,31 @@
+<template name="577b3842">
+    <view class="_view data-v-7a06ef60 reach">
+        <view class="_view data-v-7a06ef60" hidden="{{!(!nomore&&!iswait)}}">
+            <template is="330397f5" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        </view>
+        <view class="_view data-v-7a06ef60 spinner" hidden="{{!(!nomore&&iswait)}}">
+            <view class="_view data-v-7a06ef60 spinner-container container1">
+                <view class="_view data-v-7a06ef60 circle1"></view>
+                <view class="_view data-v-7a06ef60 circle2"></view>
+                <view class="_view data-v-7a06ef60 circle3"></view>
+                <view class="_view data-v-7a06ef60 circle4"></view>
+            </view>
+            <view class="_view data-v-7a06ef60 spinner-container container2">
+                <view class="_view data-v-7a06ef60 circle1"></view>
+                <view class="_view data-v-7a06ef60 circle2"></view>
+                <view class="_view data-v-7a06ef60 circle3"></view>
+                <view class="_view data-v-7a06ef60 circle4"></view>
+            </view>
+            <view class="_view data-v-7a06ef60 spinner-container container3">
+                <view class="_view data-v-7a06ef60 circle1"></view>
+                <view class="_view data-v-7a06ef60 circle2"></view>
+                <view class="_view data-v-7a06ef60 circle3"></view>
+                <view class="_view data-v-7a06ef60 circle4"></view>
+            </view>
+        </view>
+        <view class="_view data-v-7a06ef60" hidden="{{!nomore}}">
+            <template is="330397f5" data="{{...$root[$kk+'1'],$root:$root}}"></template>
+        </view>
+    </view>
+</template>
+<import src="/components/line.vue.wxml"></import>
